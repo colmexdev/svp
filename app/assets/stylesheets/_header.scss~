@@ -1,1 +1,2 @@
-.net-img { max-width: 30px; width:100%; height: auto; }
+.net-holder { width: 90%; margin: 0 auto; padding-top: 45px; }
+.net-img { max-width: 30px; width:100%; height: auto; max-height: 30px; }
