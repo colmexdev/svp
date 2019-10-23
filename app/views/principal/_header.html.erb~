@@ -8,7 +8,7 @@
 			<img id="logo-svp" data-src="<%= image_url("logo-svp-color.svg") %>" data-width data-height uk-img>
 		</div>
 		<div class="uk-width-1-1 uk-text-center">
-			<ul class="uk-navbar-nav">
+			<ul class="uk-inline-block" id="menu-header>
 				<li>Acerca de</li>
 				<li>Seminarios</li>
 				<li>Publicaciones</li>
