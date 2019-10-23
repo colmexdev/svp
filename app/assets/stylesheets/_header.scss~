@@ -6,8 +6,16 @@
 		#logo-svp { max-width: 350px; width: 95%; height: auto; }
 	}
 	#menu-header { list-style-type: none;
-		li { float: left; padding: 5px 15px;
-			a { color: #4D4F4E; }
+		li { float: left; padding: 10px 15px; font-size: 22px;
+			a { color: #4D4F4E;
+				-webkit-transition: all 0.3s linear;
+				-moz-transition: all 0.3s linear;
+				-ms-transition: all 0.3s linear;
+				-o-transition: all 0.3s linear;
+				transition: all 0.3s linear;
+				&:hover { color: #8AD6CC }
+				&.active, :active { color: #F16F70 }
+			}
 		}
 	}
 }
