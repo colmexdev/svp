@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @title ? @title + " - " : "" %>Seminario sobre Violencia y Paz</title>
+    <title>Svp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,6 @@
   </head>
 
   <body>
-		<div class="uk-position-relative" id="body-wrap">
-		<%= yield %>
-		</div>
+    <%= yield %>
   </body>
 </html>
