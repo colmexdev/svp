@@ -8,6 +8,7 @@
 	#menu-header { list-style-type: none;
 		li { float: left; padding: 10px 15px; font-size: 22px;
 			a { color: #4D4F4E;
+				text-transform: uppercase;
 				-webkit-transition: all 0.3s linear;
 				-moz-transition: all 0.3s linear;
 				-ms-transition: all 0.3s linear;
