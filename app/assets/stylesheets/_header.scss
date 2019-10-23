@@ -28,12 +28,11 @@
 					-webkit-transition: all 0.3s ease-in-out 0s;
 					transition: all 0.3s ease-in-out 0s;
 				}
-				&:hover { color: #8AD6CC 
-					&:before {
-						visibility: visible;
-						-webkit-transform: scaleX(1);
-						transform: scaleX(1);
-					}
+				&:hover { color: #8AD6CC }
+				&:hover:before {
+					visibility: visible;
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
 				}
 				&.active, :active { color: #F16F70 }
 			}
