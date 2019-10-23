@@ -1,8 +1,11 @@
 <div id="header" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
 	<nav class="uk-navbar-container" uk-navbar>
-		<div class="uk-width-1-1 net-holder">
+		<div class="uk-width-1-1 net-holder uk-text-right">
 			<img class="net-img" data-src="<%= image_url("twitter.svg") %>" data-width data-height uk-img>
 			<img class="net-img" data-src="<%= image_url("fb.svg") %>" data-width data-height uk-img>
+		</div>
+		<div class="uk-width-1-1 uk-text-center logo-holder">
+			<img id="logo-svp" data-src="<%= image_url("logo-svp-color.svg") %>" data-width data-height uk-img>
 		</div>
 	</nav>
 </div>

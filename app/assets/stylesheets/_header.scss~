@@ -1,2 +1,5 @@
-.net-holder { width: 90%; margin: 0 auto; padding-top: 45px; }
-.net-img { max-width: 30px; width:100%; height: auto; max-height: 30px; }
+#header {
+	nav { width: 90%; margin: 0 auto; padding-bottom: 50px; }
+	.net-holder {  padding: 15px 0; }
+	.net-img { max-width: 30px; width:100%; height: auto; max-height: 30px; }
+}
