@@ -1,8 +1,11 @@
 #header {
-	nav { width: 90%; margin: 0 auto; padding-bottom: 50px; display: block !important; }
+	nav { width: 90%; margin: 0 auto; padding-bottom: 50px; padding-top:30px; display: block !important; }
 	.net-holder {  padding: 15px 0; }
 	.net-img { max-width: 30px; width:100%; height: auto; max-height: 30px; }
 	.logo-holder { padding: 10px 0;
-		#logo-svp { max-width: 250px; width: 95%; height: auto; }
+		#logo-svp { max-width: 350px; width: 95%; height: auto; }
+	}
+	#menu-header { list-style-type: none;
+		li { float: left; padding: 5px 15px; }
 	}
 }
