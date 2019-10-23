@@ -9,6 +9,11 @@
 		li { float: left; padding: 10px 15px; font-size: 22px;
 			a { color: #4D4F4E;
 				text-transform: uppercase;
+				text-decoration: none;
+				letter-spacing: 0.15em;
+				display: inline-block;
+				padding: 15px 20px;
+				position: relative;
 				-webkit-transition: all 0.3s linear;
 				-moz-transition: all 0.3s linear;
 				-ms-transition: all 0.3s linear;

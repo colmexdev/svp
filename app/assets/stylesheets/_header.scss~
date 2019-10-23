@@ -23,7 +23,7 @@
 					height: 2px;
 					left: 50%;
 					position: absolute;
-					background: #8Ad6CC;
+					background: #8AD6CC;
 					transition: width 0.3s ease 0s, left 0.3s ease 0s;
 					width: 0;
 				}
