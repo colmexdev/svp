@@ -11,9 +11,9 @@ body { height: 100%; }
 	}
 }
 
-.texto-rosa { color: #F16F70; }
+.texto-rosa { color: #F16F70 !important; }
 
-#acerca { width: 100%; max-width: 1200px; margin: 0 auto; margin-top: 50px; margin-bottom: 30px;
+#acerca { width: 85%; max-width: 1200px; margin: 0 auto; margin-top: 50px; margin-bottom: 30px; color: #595E5D;
 	.titulo { text-transform: uppercase; font-family: "Montserrat"; font-size: 30px; font-weight: 700; }
 	p:nth-child(2) { font-family: "Roboto"; font-weight: 500; font-size: 20px; }
 	.negritas { font-weight: 900; }
