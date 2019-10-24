@@ -1,5 +1,5 @@
 <%= render 'principal/header' %>
-<div uk-slider id="slider">
+<div uk-slider="autoplay: true; autoplay-interval: 5000; pause-on-hover:true" id="slider">
 	<div class="uk-slider-container uk-position-relative">
 		<ul class="uk-slider-items uk-child-width-1-1">
 			<li>
@@ -12,5 +12,13 @@
 		<ul class="uk-position-bottom uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 	</div>
 </div>
+<div id="acerca">
+	<p class="texto-rosa titulo">Acerca de</p><br>
 
+	<p>El <span class="negritas">Seminario sobre Violencia y Paz de El Colegio de México</span> – coordinado por Sergio Aguayo – fue crea do
+en 2014 para generar conocimiento aplicado sobre la naturaleza de un fenómeno con raíces domésticas e
+internacionales. El supuesto central ha sido que estamos ante un asunto que trasciende ideologías o
+lealtades partidistas y que para su solución requiere de un diálogo y una convergencia entre Estado,
+sociedad y comunidad internacional.</p>
+</div>
 <%= render 'principal/footer' %>

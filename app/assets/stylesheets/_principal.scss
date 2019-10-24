@@ -11,3 +11,11 @@ body { height: 100%; }
 	}
 }
 
+.texto-rosa { color: #F16F70; }
+
+#acerca {
+	.titulo { text-transform: uppercase; }
+	p:nth-child(2) { font-family: "Roboto medium"; }
+	.negritas { font-family: "Roboto black" !important; }
+}
+
