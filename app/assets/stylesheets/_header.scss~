@@ -1,5 +1,5 @@
 #header { background-color: #FFFFFF;
-	nav { width: 90%; margin: 0 auto; padding-bottom: 50px; padding-top:30px; display: block !important; }
+	nav { width: 90%; margin: 0 auto; padding-bottom: 50px; padding-top:5px; display: block !important; }
 	.net-holder {  padding: 15px 0; }
 	.net-img { max-width: 30px; width:100%; height: auto; max-height: 30px; }
 	.logo-holder { padding: 10px 0;
@@ -58,5 +58,5 @@
 
 .uk-sticky-below {
 	.fixed { display: none; }
-	.sticky {display: block; }
+	.sticky { display: block; }
 }
