@@ -2,8 +2,10 @@
 	> div { width: 85%; max-width: 1200px; margin: 0 auto;
 		> div:nth-child(1) { width: 80%; margin: 0 auto;
 			img {width: 100%; max-width: 320px; height: auto; }
+			> div:nth-child(1) { padding-right: 15px; }
+			> div:nth-child(2) { padding-left: 15px; }
 		}
-		> div:nth-child(2) { margin: 20px auto; }
+		> div:nth-child(2) { margin: 20px auto; width: 100%px; max-width: 150px; }
 		.net-footer { width: 100%; max-width: 40px; height: auto; max-height: 45px; }
 	}
 }

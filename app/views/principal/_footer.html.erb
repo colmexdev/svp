@@ -1,6 +1,6 @@
 <div class="uk-width-1-1" id="footer">
 	<div class="uk-width-1-1">
-		<div class="uk-flex-center uk-flex-middle uk-child-width-1-2" uk-grid>
+		<div class="uk-flex-center uk-flex-middle uk-child-width-1-2 uk-grid-collapse" uk-grid>
 			<div class="uk-text-right">
 				<img data-src="<%= image_url('logo-svp-gris.svg') %>" data-width data-height uk-img>
 			</div>
@@ -8,9 +8,13 @@
 				<img data-src="<%= image_url('logo-colmex-gris.svg') %>" data-width data-height uk-img>
 			</div>
 		</div>
-		<div class="uk-text-center">
-			<img class="net-footer" data-src="<%= image_url('tw-gris.svg') %>" data-width data-height uk-img>
-			<img class="net-footer" data-src="<%= image_url('fb-gris.svg') %>" data-width data-height uk-img>
+		<div class="uk-text-center uk-grid-collapse uk-child-width-1-2" uk-grid>
+			<div class"uk-text-right">
+				<img class="net-footer" data-src="<%= image_url('tw-gris.svg') %>" data-width data-height uk-img>
+			</div>
+			<div>
+				<img class="net-footer" data-src="<%= image_url('fb-gris.svg') %>" data-width data-height uk-img>
+			</div>
 		</div>
 		<div class="uk-text-center">
 			<p>
