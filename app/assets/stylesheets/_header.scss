@@ -58,6 +58,6 @@
 	.sticky { display: none; }
 	&.uk-sticky-below {
 		.fixed { display: none; }
-		.sticky { display: block; }
+		.sticky { display: flex; }
 	}
 }
