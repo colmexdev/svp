@@ -57,6 +57,7 @@
 	.fixed { display: block; }
 	.sticky { display: none; }
 	&.uk-sticky-below {
+		nav { display: flex !important; }
 		.fixed { display: none; }
 		.sticky { display: flex; }
 	}
