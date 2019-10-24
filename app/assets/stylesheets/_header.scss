@@ -1,10 +1,12 @@
 #header { background-color: #FFFFFF;
-	nav { width: 90%; margin: 0 auto; padding-bottom: 50px; padding-top:30px; display: block !important; }
+	nav { width: 90%; margin: 0 auto; padding-bottom: 50px; padding-top:5px; display: block !important; }
 	.net-holder {  padding: 15px 0; }
 	.net-img { max-width: 30px; width:100%; height: auto; max-height: 30px; }
 	.logo-holder { padding: 10px 0;
 		#logo-svp { max-width: 350px; width: 95%; height: auto; }
 	}
+	.fixed { display: block; }
+	.sticky { display: none; }
 	#menu-header { list-style-type: none;
 		li { float: left; padding: 10px 10px; font-size: 22px;
 			a { color: #4D4F4E;
@@ -52,4 +54,9 @@
 			}
 		}
 	}
+}
+
+.uk-sticky-below {
+	.fixed { display: none; }
+	.sticky {display: block; }
 }

@@ -4,10 +4,22 @@
 			<img class="net-img" data-src="<%= image_url("twitter.svg") %>" data-width data-height uk-img>
 			<img class="net-img" data-src="<%= image_url("fb.svg") %>" data-width data-height uk-img>
 		</div>
-		<div class="uk-width-1-1 uk-text-center logo-holder">
+		<div class="uk-width-1-1 uk-text-center logo-holder fixed">
 			<img id="logo-svp" data-src="<%= image_url("logo-svp-color.svg") %>" data-width data-height uk-img>
 		</div>
-		<div class="uk-width-1-1 uk-text-center">
+		<div class="uk-width-1-1 uk-text-center fixed">
+			<ul class="uk-inline-block" id="menu-header">
+				<li><a href="#">Acerca de</a></li>
+				<li><a href="#">Seminarios</a></li>
+				<li><a href="#">Publicaciones</a></li>
+				<li><a href="#">Multimedia</a></li>
+				<li><a href="#">Cursos</a></li>
+			</ul>
+		</div>
+		<div class="uk-navbar-left uk-text-center logo-holder sticky">
+			<img id="logo-svp" data-src="<%= image_url("logo-svp-color.svg") %>" data-width data-height uk-img>
+		</div>
+		<div class="uk-navbar-right uk-text-center sticky">
 			<ul class="uk-inline-block" id="menu-header">
 				<li><a href="#">Acerca de</a></li>
 				<li><a href="#">Seminarios</a></li>
