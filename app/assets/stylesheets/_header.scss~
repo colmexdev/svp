@@ -1,9 +1,9 @@
 #header { background-color: #FFFFFF;
 	nav { width: 90%; margin: 0 auto; padding-bottom: 50px; display: block !important; }
-	.net-holder {  padding: 15px 0; width: 90%; margin: 0 auto; padding-top:5px; }
+	.net-holder {  padding: 15px 0; width: 90%; margin: 0 auto; padding-top: 15px; }
 	.net-img { max-width: 30px; width:100%; height: auto; max-height: 30px; }
 	.logo-holder { padding: 10px 0;
-		#logo-svp { max-width: 350px; width: 95%; height: auto; }
+		.logo-svp { max-width: 350px; width: 95%; height: auto; }
 	}
 	.fixed { display: block; }
 	.sticky { display: none; }
@@ -58,6 +58,7 @@
 	.sticky { display: none; }
 	&.uk-sticky-below {
 		nav { display: flex !important; }
+		.navbar-left { width:23%; height: 100%; }
 		.fixed { display: none; }
 		.sticky { display: flex; }
 	}
