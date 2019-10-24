@@ -1,4 +1,13 @@
 <%= render 'principal/header' %>
-Texto de prueba
+<div uk-slider>
+	<div class="uk-slider-container">
+		<ul class="uk-slider-items uk-child-width-1-1">
+			<li>
+				<img data-src="<%= image_url('banner-carrusel.jpg') %>" data-width data-height uk-img>
+			</li>
+		</ul>
+		<ul class="uk-slider-nav uk-dotnav"></ul>
+	</div>
+</div>
 
 <%= render 'principal/footer' %>
