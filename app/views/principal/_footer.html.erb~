@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="uk-text-center uk-grid-collapse uk-child-width-1-2" uk-grid>
-			<div>
+			<div class"uk-text-right">
 				<img class="net-footer" data-src="<%= image_url('tw-gris.svg') %>" data-width data-height uk-img>
 			</div>
 			<div>
