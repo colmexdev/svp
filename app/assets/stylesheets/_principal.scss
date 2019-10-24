@@ -13,8 +13,8 @@ body { height: 100%; }
 
 .texto-rosa { color: #F16F70; }
 
-#acerca { width: 100%; max-width: 1200px; margin: 0 auto; margin-top: 50px; margin-bottom: 30px;
-	.titulo { text-transform: uppercase; font-family: "Montserrat"; font-size: 30px; font-weight: 900; }
+#acerca { width: 85%; max-width: 1200px; margin: 0 auto; margin-top: 50px; margin-bottom: 30px;
+	.titulo { text-transform: uppercase; font-family: "Montserrat"; font-size: 30px; font-weight: 700; }
 	p:nth-child(2) { font-family: "Roboto"; font-weight: 500; font-size: 20px; }
 	.negritas { font-weight: 900; }
 }
