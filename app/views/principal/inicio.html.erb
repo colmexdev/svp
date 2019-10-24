@@ -1,6 +1,6 @@
 <%= render 'principal/header' %>
-<div uk-slider>
-	<div class="uk-slider-container">
+<div uk-slider id="slider">
+	<div class="uk-slider-container uk-position-relative">
 		<ul class="uk-slider-items uk-child-width-1-1">
 			<li>
 				<img data-src="<%= image_url('banner-carrusel.jpg') %>" data-width data-height uk-img>
@@ -9,7 +9,7 @@
 				<img data-src="<%= image_url('banner-carrusel.jpg') %>" data-width data-height uk-img>
 			</li>
 		</ul>
-		<ul class="uk-slider-nav uk-dotnav"></ul>
+		<ul class="uk-position-bottom uk-slider-nav uk-dotnav uk-flex-center"></ul>
 	</div>
 </div>
 
