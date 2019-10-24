@@ -3,6 +3,7 @@
 		> div:nth-child(1) { width: 80%; margin: 0 auto;
 			img {width: 75%; max-width: 280px; height: auto; }
 		}
+		< div:nth-child(2) { margin: 35px auto; }
 		.net-footer { width: 100%; max-width: 40px; height: auto; max-height: 45px; }
 	}
 }
