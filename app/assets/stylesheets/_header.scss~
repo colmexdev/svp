@@ -56,9 +56,9 @@
 	}
 	.fixed { display: block; }
 	.sticky { display: none; }
-	&.uk-sticky-below { background-color: #FFFFFF;
-		nav { display: flex !important; }
-		.navbar-left { width:23%; height: 100%; }
+	&.uk-sticky-below {
+		nav { display: flex !important; background-color: #FFFFFF !important; }
+		.uk-navbar-left { width:23%; height: 100%; }
 		.fixed { display: none; }
 		.sticky { display: flex; }
 	}
