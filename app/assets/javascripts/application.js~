@@ -11,5 +11,13 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery3
+//= require popper
+//= require bootstrap
 //= require uikit
 //= require uikit-icons
+//= require flatpickr
+//= require flatpickr/l10n/es
+//= require jquery.remotipart
+//= require trix
+//= require backend

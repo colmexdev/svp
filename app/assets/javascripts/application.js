@@ -21,3 +21,4 @@
 //= require jquery.remotipart
 //= require trix
 //= require backend
+//= require principal
