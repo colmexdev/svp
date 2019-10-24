@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Svp</title>
+    <title><%= @title ? @title + " - " : "" %>Seminario sobre Violencia y Paz</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+		<div class="uk-position-relative" id="body-wrap">
+		<%= yield %>
+		</div>
   </body>
 </html>
