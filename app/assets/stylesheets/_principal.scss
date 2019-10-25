@@ -1,6 +1,8 @@
 body { height: 100%; }
 #body-wrap { min-height: 100%; }
 
+svg path { all: inherit; }
+
 #slider {
 	.uk-slider-nav {
 		li { padding: 0 4px; }
