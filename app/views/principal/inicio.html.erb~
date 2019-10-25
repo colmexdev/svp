@@ -25,7 +25,7 @@ en 2014 para generar conocimiento aplicado sobre la naturaleza de un fenómeno c
 	<span class="titulo-seccion">Publicaciones</span>
 	<div class="portadas-pubs uk-child-width-1-3@m uk-child-width-1-1 uk-flex-middle" uk-grid>
 		<div>
-			<div class="uk-flex uk-flex-middle uk-flex-center">
+			<div class="uk-position-relative">
 				<img class="portada" data-src="<%= image_url('portada1.png') %>" data-width data-height uk-img>
 			</div>
 		</div>
@@ -40,5 +40,18 @@ en 2014 para generar conocimiento aplicado sobre la naturaleza de un fenómeno c
 			</div>
 		</div>
 	</div>
+	<script>
+		window.addEventListener("load", function(){
+			var portadas = document.querySelectorAll(".portada");
+			var maximo = 0;
+			for(var i = 0; i < portadas.length; i++){
+				maximo = Math.max(maximo, portadas[i].offsetHeight);
+			}
+			var frames = document.querySelectorAll(".portadas-pubs > div > div");
+			for(var i = 0; i < frames.length; i++){
+				frames[i].style.height = Math.ceil(maximo) + "px";
+			}
+		});
+	</script>
 </div>
 <%= render 'principal/footer' %>
