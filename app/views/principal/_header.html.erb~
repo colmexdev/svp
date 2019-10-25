@@ -1,10 +1,10 @@
 <div id="header" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
 		<div class="uk-width-1-1 net-holder uk-text-right">
 			<a href="https://twitter.com/SViolenciayPaz" target="_blank">
-				<svg viewBox="0 0 34 34" class="net-img"><use class="flecha-menu" xlink:href="#tw"></use></svg>
+				<svg viewBox="0 0 34 34" class="net-img"><use class="net" xlink:href="#tw"></use></svg>
 			</a>
 			<a href="https://www.facebook.com/Seminario.Violencia/" target="_blank">
-				<svg viewBox="0 0 34 34" class="net-img"><use class="fb" xlink:href="#fb"></use></svg>
+				<svg viewBox="0 0 34 34" class="net-img"><use class="net" xlink:href="#fb"></use></svg>
 			</a>
 		</div>
 	<nav class="uk-navbar-container" uk-navbar>
