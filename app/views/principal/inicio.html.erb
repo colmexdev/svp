@@ -45,7 +45,7 @@ en 2014 para generar conocimiento aplicado sobre la naturaleza de un fenómeno c
 			var portadas = document.querySelectorAll(".portada");
 			var maximo = 0;
 			for(var i = 0; i < portadas.length; i++){
-				maximo = Math.max(maximo, portadas[i].offsetHeight);
+				maximo = Math.max(maximo, parseFloat(Window.getComputedStyle(portadas[i])["height"].slice(0,-2)));
 			}
 			var frames = document.querySelectorAll(".portadas-pubs > div > div");
 			for(var i = 0; i < frames.length; i++){
