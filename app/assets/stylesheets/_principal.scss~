@@ -24,4 +24,4 @@ body { height: 100%; }
 }
 
 #publicaciones { width: 90%; margin: 0 auto; padding: 20px 0; }
-.titulo-seccion { font-family: "Montserrat"; font-weight: 700; color: #F16F70; outline: #A6A6A6 solid 2px; font-size: 30px; text-transform: uppercase; }
+.titulo-seccion { font-family: "Montserrat"; font-weight: 700; color: #F16F70; outline: #A6A6A6 solid 2px; font-size: 35px; text-transform: uppercase; padding: 15px 30px; }
