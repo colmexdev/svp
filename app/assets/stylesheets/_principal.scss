@@ -40,4 +40,6 @@ svg path { all: inherit; }
 .titulo-encabezado { color: #F16F70; font-family: "Montserrat"; font-weight: 700; font-size: 80px; text-transform: uppercase; }
 .outline  { text-shadow: 0 1px 1px #F16F70, 0 -1px 1px #F16F70, 1px 0 1px #F16F70, -1px 0 1px #F16F70; color: #BCE2D3; }
 .blanco { color: #FFFFFF !important; }
-.contenido { margin: 0 auto; margin-top: 80px; margin-bottom: 100px; width: 85%; max-width: 1200px; }
+.contenido { margin: 0 auto; margin-top: 80px; margin-bottom: 100px; width: 90%; max-width: 1200px;
+	p { font-family: "Roboto"; font-weight: 500; font-size: 21px; color: #4D4F4E; }
+}
