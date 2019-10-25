@@ -37,4 +37,4 @@ svg path { all: inherit; }
 .titulo-seccion { font-family: "Montserrat"; font-weight: 700; color: #F16F70; outline: #A6A6A6 solid 3px; font-size: 35px; text-transform: uppercase; padding: 10px 30px; }
 
 .encabezado-seccion { background-color: #BCE2D3; padding: 60px 0; }
-.titulo-encabezado { color: #F16F70; font-family: "Montserrat"; font-weight: 700; font-size: 50px; }
+.titulo-encabezado { color: #F16F70; font-family: "Montserrat"; font-weight: 700; font-size: 60px; text-transform: uppercase; }
