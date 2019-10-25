@@ -1,0 +1,6 @@
+<%= render 'principal/header' %>
+<div class="encabezado-seccion uk-text-center">
+	<span class="titulo-encabezado">Acerca de</span>
+</div>
+
+<%= render 'principal/footer' %>
