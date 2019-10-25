@@ -24,7 +24,7 @@ body { height: 100%; }
 }
 
 #publicaciones { width: 90%; margin: 0 auto; padding: 20px 0; max-width: 1300px;
-	.portadas-pubs { width: 90%;
+	.portadas-pubs { width: 90%; margin-top: 50px; margin-bottom: 70px;
 		> div {
 			> div { box-shadow: 20px 10px 5px #CCDEDC; width: -webkit-calc(100% - 20px); width: -moz-calc(100% - 20px); width: calc(100% - 20px);  }
 			img { width: 90%; }
