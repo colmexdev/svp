@@ -19,7 +19,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "uikit";
+@import "principal";
 @import "panel";
 @import "header";
 @import "footer";
-@import "principal";
