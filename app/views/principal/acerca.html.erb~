@@ -14,7 +14,7 @@
 	<% end %>
 	<div class="lista">
 		<div class="letra">
-			a)
+			<p class="outline blanco">a)</p>
 		</div>
 		<div class="parrafo">
 			<p>Conferencias, paneles y congresos públicos y privados con los protagonistas de la violencia y la paz. Por ejemplo, cada año ha organizado entre ocho y diez sesiones públicas donde intercambian ideas y propuestas académicos, activistas, periodistas y diplomáticos en torno a temas que van variando.</p>
