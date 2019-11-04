@@ -1,1 +1,2 @@
-.nombre { font-family: "Montserrat"; font-weight: 600; font-size: 40px; color: #F16F70; text-transform: uppercase; }
+.nombre { font-family: "Montserrat"; font-weight: 600; font-size: 50px; color: #F16F70; text-transform: uppercase; }
+.foto-persona:nth-child(:odd) { -webkit-transform: scaleX(-1); transform: scaleX(-1); }
