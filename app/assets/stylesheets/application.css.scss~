@@ -20,6 +20,7 @@
 @import "font-awesome";
 @import "uikit";
 @import "principal";
+@import "acerca";
 @import "panel";
 @import "header";
 @import "footer";

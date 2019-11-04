@@ -6,4 +6,7 @@ class PrincipalController < ApplicationController
   def acerca
   end
 
+  def colaboradores
+  end
+
 end
