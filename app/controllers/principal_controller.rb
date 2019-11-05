@@ -12,4 +12,6 @@ class PrincipalController < ApplicationController
   def seminarios
   end
 
+  def multimedia
+  end
 end

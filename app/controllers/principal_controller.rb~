@@ -9,4 +9,7 @@ class PrincipalController < ApplicationController
   def colaboradores
   end
 
+  def seminarios
+  end
+
 end
