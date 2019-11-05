@@ -5,7 +5,7 @@ body { height: 100%; }
 svg path { all: inherit; }
 
 #slider {
-	.uk-slider-container { max-height: 600px;
+	.uk-slider-container { max-height: 600px; height: 100%;
 		.uk-slider-items { height: 100%;
 			> li > .uk-position-relative { height: 100%; width: 100%; }
 		}
