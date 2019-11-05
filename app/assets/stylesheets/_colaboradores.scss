@@ -1,2 +1,4 @@
-.nombre { font-family: "Montserrat"; font-weight: 600; font-size: 50px; color: #F16F70; text-transform: uppercase; }
-.foto-persona:nth-child(odd) { -webkit-transform: scaleX(-1); transform: scaleX(-1); }
+.nombre { font-family: "Montserrat"; font-weight: 700; font-size: 50px; color: #F16F70; text-transform: uppercase; }
+.foto-persona { clip-path: polygon(10% 0, 100% 0, 100% 100%, 40% 100%);
+	&:nth-child(odd) { -webkit-transform: scaleX(-1); transform: scaleX(-1); }
+}
