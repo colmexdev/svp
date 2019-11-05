@@ -1,4 +1,4 @@
-document.addEventListener("resize", function(){
+window.addEventListener("resize", function(){
 	document.querySelector("#body-wrap").style.paddingBottom = document.querySelector("#footer").offsetHeight + "px";
 	try {
 		document.querySelector("#slider").style.height = (window.outerWidth * 11 / 20) + "px";
@@ -6,5 +6,5 @@ document.addEventListener("resize", function(){
 });
 
 window.addEventListener("load", function(){
-	document.dispatchEvent(new Event("resize"));
+	window.dispatchEvent(new Event("resize"));
 });
