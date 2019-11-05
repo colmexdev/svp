@@ -5,15 +5,15 @@
 <div class="contenido">
 	<div class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m" uk-grid>
 		<div class="seminario uk-text-center">
-			<img data-src="<%= image_url('sem1.png') %>" data-width data-height uk-img>
+			<img class="img-video" data-src="<%= image_url('sem1.png') %>" data-width data-height uk-img>
 
 		</div>
 		<div class="seminario uk-text-center">
-			<img data-src="<%= image_url('sem2.png') %>" data-width data-height uk-img>
+			<img class="img-video" data-src="<%= image_url('sem2.png') %>" data-width data-height uk-img>
 
 		</div>
 		<div class="seminario uk-text-center">
-			<img data-src="<%= image_url('sem3.png') %>" data-width data-height uk-img>
+			<img class="img-video" data-src="<%= image_url('sem3.png') %>" data-width data-height uk-img>
 
 		</div>
 	</div>
