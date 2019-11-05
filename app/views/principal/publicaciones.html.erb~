@@ -1,0 +1,8 @@
+<%= render 'principal/header' %>
+<div class="encabezado-seccion uk-text-center">
+	<span class="titulo-encabezado">Publicaciones</span>
+</div>
+<div class="contenido">
+
+</div>
+<%= render 'principal/footer' %>

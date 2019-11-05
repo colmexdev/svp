@@ -15,6 +15,10 @@ class PrincipalController < ApplicationController
     @title = "Seminarios"
   end
 
+  def publicaciones
+    @title = "Publicaciones"
+  end
+
   def multimedia
     @title = "Multimedia"
   end

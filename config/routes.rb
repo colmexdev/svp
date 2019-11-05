@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/acerca-de' => 'principal#acerca', :as => :acerca
   get '/colaboradores' => 'principal#colaboradores', :as => :colaboradores
   get '/seminarios' => 'principal#seminarios', :as => :seminarios
+  get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones
   get '/multimedia' => 'principal#multimedia', :as => :multimedia
 
   root to: 'principal#inicio'
