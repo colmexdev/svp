@@ -1,0 +1,13 @@
+<%= render 'principal/header' %>
+<div class="encabezado-seccion uk-text-center">
+	<span class="titulo-encabezado">Seminarios <span class="outline">2019</span></span>
+</div>
+<div class="contenido">
+	<div class="uk-grid-collapse uk-flex-center uk-flex-middle uk-child-width-1-2@m" uk-grid>
+		<div class="seminario">
+			<img data-src="<%= image_url('sem1.png') %>" data-width data-height uk-img>
+			<a class="boton-seminario" href="#">Más información</a>
+		</div>
+	</div>
+</div>
+<%= render 'principal/footer' %>

@@ -3,7 +3,7 @@
 }
 .grid-persona { border-bottom: solid 1px #CCDEDC; padding: 30px 0;
 	&:first-child { padding-top: 10px; }
-	&:last-child { border-bottom: none; }
+	&:last-child { border-bottom: none; margin-bottom: 45px; }
 	&:nth-child(odd) .foto-persona { -webkit-transform: scaleX(-1); transform: scaleX(-1); }
 	&:nth-child(even) {
 		.nombre { color: #8AD6CC !important; }

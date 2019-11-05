@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/' => 'principal#inicio', :as => :inicio
   get '/acerca-de' => 'principal#acerca', :as => :acerca
   get '/colaboradores' => 'principal#colaboradores', :as => :colaboradores
+  get '/seminarios' => 'principal#seminarios', :as => :seminarios
 
   root to: 'principal#inicio'
 end
