@@ -2,10 +2,10 @@
 .foto-persona { clip-path: polygon(10% 0, 100% 0, 100% 100%, 40% 100%);
 }
 .sep-persona { border-color: #CCDEDC; }
-.grid-persona:nth-child(odd) {
-	.foto-persona { -webkit-transform: scaleX(-1); transform: scaleX(-1); }
+.grid-persona{
+	.foto-persona:nth-child(odd) { -webkit-transform: scaleX(-1); transform: scaleX(-1); }
 }
-.grid-persona:nth-child(even) {
+.grid-persona {
 	.nombre { color: #8AD6CC !important; }
 	.outline { text-shadow: 0 1px 1px #8AD6CC, 0 -1px 1px #8AD6CC, 1px 0 1px #8AD6CC, -1px 0 1px #8AD6CC !important; }
 	p:nth-child(3) a .net { fill: #F16F70 !important; }
