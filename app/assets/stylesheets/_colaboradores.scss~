@@ -5,7 +5,7 @@
 .sep-persona { border-color: #CCDEDC; }
 .net-persona a .net { fill: #F16F70 !important; }
 .net-persona a:hover .net { fill: #8ad6cc !important; }
-.grid-persona {
-	.nombre:nth-child(even) { color: #8AD6CC !important; }
-	.outline:nth-child(even) { text-shadow: 0 1px 1px #8AD6CC, 0 -1px 1px #8AD6CC, 1px 0 1px #8AD6CC, -1px 0 1px #8AD6CC !important; }
+.grid-persona:nth-child(even) {
+	.nombre { color: #8AD6CC; }
+	.outline { text-shadow: 0 1px 1px #8AD6CC, 0 -1px 1px #8AD6CC, 1px 0 1px #8AD6CC, -1px 0 1px #8AD6CC; }
 }
