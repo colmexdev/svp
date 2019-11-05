@@ -78,8 +78,26 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+vids:
+  <<: *default
+  database: <%= ENV["COED_DB"] %>
+  username: <%= ENV["COED_DB_USR"] %>
+  password: <%= ENV["COED_DB_PWD"] %>
+  host: "localhost"
+
+pub:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  socket: /var/run/mysqld/mysqld.sock
+  database: <%= ENV["PUB_DB"] %>
+  username: <%= ENV["PUB_USR"] %>
+  password: <%= ENV["PUB_PWD"] %>
+  host: <%= ENV["PUB_HOST"] %>
+
 production:
   <<: *default
+  host: "localhost"
   database: <%= ENV["SVP_DB"] %>
   username: <%= ENV["SVP_USR"] %>
   password: <%= ENV['SVP_PWD'] %>
