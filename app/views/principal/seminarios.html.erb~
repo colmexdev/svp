@@ -17,7 +17,7 @@
 			<a class="boton-seminario" href="#">Más información</a>
 		</div>
 	</div>
-	<div class="sel-year uk-grid-collapse" uk-grid>
+	<div class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
 		<div class="sem-year">< 2020</div>
 		<div class="sem-year">2018 ></div>
 	</div>
