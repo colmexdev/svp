@@ -22,6 +22,7 @@
 @import "principal";
 @import "acerca";
 @import "colaboradores";
+@import "seminarios";
 @import "panel";
 @import "header";
 @import "footer";
