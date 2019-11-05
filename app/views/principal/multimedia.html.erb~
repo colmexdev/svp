@@ -3,6 +3,23 @@
 	<span class="titulo-encabezado">Multimedia</span>
 </div>
 <div class="contenido">
-
+	<div class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m" uk-grid>
+		<div class="seminario uk-text-center">
+			<img data-src="<%= image_url('sem1.png') %>" data-width data-height uk-img>
+			<a class="boton-seminario" href="#">Más información</a>
+		</div>
+		<div class="seminario uk-text-center">
+			<img data-src="<%= image_url('sem2.png') %>" data-width data-height uk-img>
+			<a class="boton-seminario" href="#">Más información</a>
+		</div>
+		<div class="seminario uk-text-center">
+			<img data-src="<%= image_url('sem3.png') %>" data-width data-height uk-img>
+			<a class="boton-seminario" href="#">Más información</a>
+		</div>
+	</div>
+	<div class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
+		<div class="sem-year" style="font-size: 30px;">< Anterior</div>
+		<div class="sem-year uk-text-right" style="font-size: 30px;">Siguiente ></div>
+	</div>
 </div>
 <%= render 'principal/footer' %>
