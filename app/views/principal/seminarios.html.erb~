@@ -4,14 +4,7 @@
 </div>
 <div class="contenido">
 	<div id="grid-seminarios" class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m" uk-grid>
-		<div class="seminario uk-text-center">
-			<img data-src="<%= image_url('sem2.png') %>" data-width data-height uk-img>
-			<a class="boton-seminario" href="#">Más información</a>
-		</div>
-		<div class="seminario uk-text-center">
-			<img data-src="<%= image_url('sem3.png') %>" data-width data-height uk-img>
-			<a class="boton-seminario" href="#">Más información</a>
-		</div>
+
 	</div>
 	<div class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
 		<div class="sem-year" id="nxt-yr">< 2020</div>
