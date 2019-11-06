@@ -3,7 +3,6 @@ xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?categoria=Seminario 
 xhr.onload = function(){
 	if(xhr.status === 200){
 		var result = JSON.parse(xhr.response);
-		console.log(result);
 		var seminarios = "";
 		for(var i = 0; i < result["videos"].length; i++){
 			seminarios = seminarios + '<div class="seminario uk-text-center">' +
@@ -15,27 +14,27 @@ xhr.onload = function(){
 	}
 };
 xhr.send();
-xhr = new XMLHttpRequest();
-xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?categoria=Seminario sobre Violencia y Paz&ordercrono=desc&anio=<%= params[:anio] ? params[:anio].to_i + 1 : '2020' %>");
-xhr.onload = function(){
-	if(xhr.status === 200){
-		var result = JSON.parse(xhr.response);
+var xhr1 = new XMLHttpRequest();
+xhr1.open("get","https://www.colmex.mx/catalogo_eventos.json?categoria=Seminario sobre Violencia y Paz&ordercrono=desc&anio=<%= params[:anio] ? params[:anio].to_i + 1 : '2020' %>");
+xhr1.onload = function(){
+	if(xhr1.status === 200){
+		var result = JSON.parse(xhr1.response);
 		if(result["total"] == 0)
 			document.querySelector("#nxt-yr").innerHTML = "";
 		else
 			document.querySelector("#nxt-yr").innerHTML = "< <%= params[:anio] ? params[:anio].to_i + 1 : '2020' %>";
 	}
 };
-xhr.send();
-xhr = new XMLHttpRequest();
-xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?categoria=Seminario sobre Violencia y Paz&ordercrono=desc&anio=<%= params[:anio] ? params[:anio].to_i - 1 : '2018' %>");
-xhr.onload = function(){
-	if(xhr.status === 200){
-		var result = JSON.parse(xhr.response);
+xhr1.send();
+var xhr2 = new XMLHttpRequest();
+xhr2.open("get","https://www.colmex.mx/catalogo_eventos.json?categoria=Seminario sobre Violencia y Paz&ordercrono=desc&anio=<%= params[:anio] ? params[:anio].to_i - 1 : '2018' %>");
+xhr2.onload = function(){
+	if(xhr2.status === 200){
+		var result = JSON.parse(xhr2.response);
 		if(result["total"] == 0)
 			document.querySelector("#lst-yr").innerHTML = "";
 		else
 			document.querySelector("#lst-yr").innerHTML = "<%= params[:anio] ? params[:anio].to_i - 1 : '2018' %> >";
 	}
 };
-xhr.send();
+xhr2.send();
