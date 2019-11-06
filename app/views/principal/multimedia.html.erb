@@ -17,5 +17,23 @@
 		<div class="sem-year uk-text-right" style="font-size: 25px;"><a id="lst-yr" data-remote="true"></a></div>
 	</div>
 </div>
-
+<script>
+	var xhr = new XMLHttpRequest();
+	xhr.open("get","<%= multimedia_path %>.js?offset=<%= params[:offset] ? params[:offset] : '0' %>");
+	xhr.withCredentials = true;
+	xhr.responseType = "blob";
+	xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");
+	xhr.onload = function(){
+		if(xhr.status === 200){
+			var s = document.querySelector("#script-js");
+			if(s)
+				s.remove();
+			var script = document.createElement("script");
+			script.id = "script-js";
+			script.src = URL.createObjectURL(xhr.response);
+			document.body.appendChild(script);
+		}
+	};
+	xhr.send();
+</script>
 <%= render 'principal/footer' %>

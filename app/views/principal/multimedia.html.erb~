@@ -13,8 +13,8 @@
 		<% end %>
 	</div>
 	<div style="margin-bottom: 30px !important;" class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
-		<div class="sem-year" style="font-size: 25px;"><a id="nxt-yr"></a></div>
-		<div class="sem-year uk-text-right" style="font-size: 25px;"><a id="lst-yr"></a></div>
+		<div class="sem-year" style="font-size: 25px;"><a id="nxt-yr" data-remote="true"></a></div>
+		<div class="sem-year uk-text-right" style="font-size: 25px;"><a id="lst-yr" data-remote="true"></a></div>
 	</div>
 </div>
 
