@@ -3,11 +3,7 @@
 	<span class="titulo-encabezado">Seminarios <span class="outline">2019</span></span>
 </div>
 <div class="contenido">
-	<div class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m" uk-grid>
-		<div class="seminario uk-text-center">
-			<img data-src="<%= image_url('sem1.png') %>" data-width data-height uk-img>
-			<a class="boton-seminario" href="#">Más información</a>
-		</div>
+	<div id="grid-seminarios" class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m" uk-grid>
 		<div class="seminario uk-text-center">
 			<img data-src="<%= image_url('sem2.png') %>" data-width data-height uk-img>
 			<a class="boton-seminario" href="#">Más información</a>
@@ -18,8 +14,23 @@
 		</div>
 	</div>
 	<div class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
-		<div class="sem-year">< 2020</div>
-		<div class="sem-year uk-text-right">2018 ></div>
+		<div class="sem-year" id="nxt-yr">< 2020</div>
+		<div class="sem-year uk-text-right" id="lst-yr">2018 ></div>
 	</div>
 </div>
+<script>
+var xhr = new XMLHttpRequest();
+xhr.open("get","<%= seminarios_path(anio: (params[:anio] ? params[:anio] : '2019' )) %>");
+xhr.withCredentials = true;
+xhr.responseType = "blob";
+xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");
+xhr.onload = function(){
+	if(xhr.status === 200){
+		var script = document.createElement("script");
+		script.src = URL.createObjectURL(xhr.response);
+		document.body.appendChild(script);
+	}
+};
+xhr.send();
+</script>
 <%= render 'principal/footer' %>
