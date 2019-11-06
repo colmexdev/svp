@@ -22,4 +22,22 @@
 		<div class="sem-year uk-text-right">2018 ></div>
 	</div>
 </div>
+<script>
+var xhr = new XMLHttpRequest();
+xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?categoria=Seminario sobre Violencia y Paz&ordercrono=desc&anio=<%= params[:anio] ? params[:anio] : '2019' %>")
+xhr.withCredentials = true;
+//xhr.responseType = "blob";
+xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");
+// Si se procesa la petición, se ejecuta el script.
+xhr.onload = function(){
+	if(xhr.status === 200){
+		var result = JSON.parse(xhr.responseText);
+		console.log(result);
+		//var script = document.createElement("script");
+		//script.src = URL.createObjectURL(xhr.response);
+		//document.body.appendChild(script);
+	}
+};
+xhr.send();
+</script>
 <%= render 'principal/footer' %>
