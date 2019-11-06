@@ -171,40 +171,19 @@ class PanelController < ApplicationController
       # Modelo para Personas de Organización (Sobre)
       "Persona de 'Organización'": {
         model: Persona, 
-        fields: {nombre: "Nombre", cargo: "Cargo", indice: "Índice"}, 
-        p_text: [:cargo],
+        fields: {nombre: "Nombre", semblanza: "Semblanza", twitter: "Liga a cuenta Twitter", fb: "Liga a cuenta de Facebook", indice: "Índice"}, 
+        p_text: [:nombre, :twitter, :fb],
         numbers: [:indice],
-        select: {nombre: Profesor.where(centro: ["CEDUA", "Jubilado", "Jubilada"]).map{|x| [x.nombre, x.nombre]} }
+        trix: [:semblanza]
       # Modelo para estudiantes del histórico.
-      }, "Estudiantes": {
-        model: Student,
-        fields: {nombre: "Nombre", ap_pat: "Apellido paterno", ap_mat: "Apellido materno", programa: "Programa académico", gen: "Promoción", status: "Status", mail: "Correo electrónico", tesis: "Título(s) de tesis", premios: "Premios recibidos"},
-        p_text: [:nombre, :ap_pat, :ap_mat, :gen, :mail],
-        textarea: [:tesis, :premios],
-        select: {status: [["Regular","Regular"],["Egresado","Egresado"]], programa: [["Maestría en Demografía", "Maestría en Demografía"],["Maestría en Desarrollo Urbano", "Maestría en Desarrollo Urbano"],["Doctorado en C. Soc. con Espec. en Estudios de Población", "Doctorado en C. Soc. con Espec. en Estudios de Población"],["Maestría en Estudios Urbanos", "Maestría en Estudios Urbanos"],["Doctorado en Estudios de Población", "Doctorado en Estudios de Población"],["Doctorado en Estudios Urbanos y Ambientales", "Doctorado en Estudios Urbanos y Ambientales"],["Programa en Est. A. en Des. Sustentable y Medio Ambiente", "Programa en Est. A. en Des. Sustentable y Medio Ambiente"]]}
-      }, "Sliders": {
-        model: Slider,
-        fields: {liga: "Liga", posicion: "Posición del badge", fecha_i: "Fecha de publicación", fecha_f: "Fecha de expiración"},
-        imgs: {banner: "Imagen de fondo", badge: "Badge"},
-        dates: [:fecha_i, :fecha_f],
-        p_text: [:liga],
-        select: {posicion: [["Superior izquierda","top-left"],["Superior centrado","top-center"],["Superior derecha","top-right"],["Centrado izquierda","center-left"],["Centrado","center"],["Centrado derecha","center-right"],["Inferior izquierda","bottom-left"],["Inferior centrado","bottom-center"],["Inferior derecha","bottom-right"]]}
-      }, "Programas académicos": {
-        model: Programa,
-        fields: {programa: "Grado académico", titulo: "Título", descripcion: "Descripción", brief: "Descripción breve", fecha_i: "Fecha inicio de convocatoria", fecha_f: "Fecha fin de convocatoria"},
-        imgs: {arte: "Arte"},
-        trix: [:descripcion, :brief],
-        dates: [:fecha_i, :fecha_f],
-        p_text: [:titulo],
-        select: {programa: [["Maestría","Maestría"],["Doctorado","Doctorado"]]}
-      }, "Proyectos de investigación": {
-        model: Proyecto,
-        fields: {titulo: "Nombre", descripcion: "Descripción", liga: "Liga al proyecto", indice: "Índice"},
-        imgs: {imagen: "Imagen"},
-        p_text: [:titulo, :liga],
-        numbers: [:indice],
-        trix: [:descripcion]
-      }
+      }#, "Sliders": {
+      #  model: Slider,
+      #  fields: {liga: "Liga", posicion: "Posición del badge", fecha_i: "Fecha de publicación", fecha_f: "Fecha de expiración"},
+      #  imgs: {banner: "Imagen de fondo", badge: "Badge"},
+      #  dates: [:fecha_i, :fecha_f],
+      #  p_text: [:liga],
+      #  select: {posicion: [["Superior izquierda","top-left"],["Superior centrado","top-center"],["Superior derecha","top-right"],["Centrado izquierda","center-left"],["Centrado","center"],["Centrado derecha","center-right"],["Inferior izquierda","bottom-left"],["Inferior centrado","bottom-center"],["Inferior derecha","bottom-right"]]}
+      #}
     }
   end
   # Función que regresa, como variables globales, los campos de los modelos seleccionados.

@@ -171,7 +171,8 @@ class PanelController < ApplicationController
       # Modelo para Personas de Organización (Sobre)
       "Persona de 'Organización'": {
         model: Persona, 
-        fields: {nombre: "Nombre", semblanza: "Semblanza", twitter: "Liga a cuenta Twitter", fb: "Liga a cuenta de Facebook", indice: "Índice"}, 
+        fields: {nombre: "Nombre", semblanza: "Semblanza", twitter: "Liga a cuenta Twitter", fb: "Liga a cuenta de Facebook", indice: "Índice"},
+        imgs: {foto: "Fotografía"},
         p_text: [:nombre, :twitter, :fb],
         numbers: [:indice],
         trix: [:semblanza]
