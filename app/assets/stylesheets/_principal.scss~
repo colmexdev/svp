@@ -34,8 +34,7 @@ svg path { all: inherit; }
 #publicaciones { width: 90%; margin: 0 auto; padding: 20px 0; max-width: 1300px;
 	.portadas-pubs { width: 90%; margin: 0 auto; margin-top: 50px; margin-bottom: 70px;
 		> div {
-			> div { box-shadow: 20px 10px 5px #CCDEDC; width: -webkit-calc(100% - 20px); width: -moz-calc(100% - 20px); width: calc(100% - 20px);  }
-			img { width: 90%; }
+			img { width: 90%; box-shadow: 20px 10px 5px #CCDEDC; }
 		}
 	}
 }
@@ -45,6 +44,6 @@ svg path { all: inherit; }
 .titulo-encabezado { color: #F16F70; font-family: "Montserrat"; font-weight: 700; font-size: 80px; text-transform: uppercase; }
 .outline  { text-shadow: 0 1px 1px #F16F70, 0 -1px 1px #F16F70, 1px 0 1px #F16F70, -1px 0 1px #F16F70; color: #BCE2D3; }
 .blanco { color: #FFFFFF !important; }
-.contenido { margin: 0 auto; margin-top: 80px; margin-bottom: 100px; width: 90%; max-width: 1200px;
+.contenido { margin: 0 auto; margin-top: 80px; margin-bottom: 50px; width: 90%; max-width: 1200px;
 	p, ol, ul { font-family: "Roboto"; font-weight: 500; font-size: 21px; color: #4D4F4E; text-align: justify; width: 90%; margin-left: auto; margin-right: auto; }
 }
