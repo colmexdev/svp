@@ -12,7 +12,6 @@
 	</div>
 </div>
 <script>
-//window.addEventListener("load",function(){
 	var xhr = new XMLHttpRequest();
 	xhr.open("get","<%= seminarios_path %>.js?anio=<%= params[:anio] ? params[:anio] : '2019' %>");
 	xhr.withCredentials = true;
@@ -26,6 +25,5 @@
 		}
 	};
 	xhr.send();
-//});
 </script>
 <%= render 'principal/footer' %>

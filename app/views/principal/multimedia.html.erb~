@@ -4,22 +4,17 @@
 </div>
 <div class="contenido">
 	<div class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m uk-margin-large-bottom" uk-grid>
+		<% @videos-each do |v| %>
 		<div class="seminario uk-text-center">
-			<img class="img-video" data-src="<%= image_url('sem1.png') %>" data-width data-height uk-img>
-
+			<img class="img-video" data-src="<%= v.thumbnail %>" data-width data-height uk-img>
+			
 		</div>
-		<div class="seminario uk-text-center">
-			<img class="img-video" data-src="<%= image_url('sem2.png') %>" data-width data-height uk-img>
-
-		</div>
-		<div class="seminario uk-text-center">
-			<img class="img-video" data-src="<%= image_url('sem3.png') %>" data-width data-height uk-img>
-
-		</div>
+		<% end %>
 	</div>
-	<div class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
+	<div style="margin-bottom: 30px !important;" class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
 		<div class="sem-year" style="font-size: 25px;">< Anterior</div>
 		<div class="sem-year uk-text-right" style="font-size: 25px;">Siguiente ></div>
 	</div>
 </div>
+
 <%= render 'principal/footer' %>

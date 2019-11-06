@@ -25,5 +25,10 @@ class PrincipalController < ApplicationController
 
   def multimedia
     @title = "Multimedia"
+    @videos = Video.where(lista: "Seminario sobre Violencia y Paz").limit(6).offset(params[:offset] ? params[:offset].to_i * 6 : 0).order(fecha: :desc)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 end

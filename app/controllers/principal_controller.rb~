@@ -13,6 +13,10 @@ class PrincipalController < ApplicationController
 
   def seminarios
     @title = "Seminarios"
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def publicaciones
