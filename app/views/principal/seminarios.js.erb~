@@ -6,7 +6,7 @@ xhr.onload = function(){
 		var seminarios = "";
 		for(var i = 0; i < result["videos"].length; i++){
 			seminarios = seminarios + '<div class="seminario uk-text-center">' +
-			'<img data-src="<%= image_url('sem1.png') %>" data-width data-height uk-img>' +
+			'<img data-src="' + result["videos"][i]["ligaImagen"] + '" data-width data-height uk-img>' +
 			'<a class="boton-seminario" href="#">Más información</a>' +
 		'</div>';
 		}
