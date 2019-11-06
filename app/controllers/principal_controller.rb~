@@ -9,6 +9,7 @@ class PrincipalController < ApplicationController
 
   def colaboradores
     @title = "Colaboradores"
+    @personas = Persona.order(indice: :asc)
   end
 
   def seminarios

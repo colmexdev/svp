@@ -7,14 +7,14 @@
 		<% @videos.each do |v| %>
 		<div class="seminario uk-text-center">
 			<a href="https://www.youtube.com/watch?v=<%= v.v_id %>" data-caption="<%= v.titulo %>">
-				<img class="img-video" data-src="<%= v.thumbnail.gsub("default","hqdefault") %>" data-width data-height uk-img>
+				<img class="img-video" data-src="<%= v.thumbnail.gsub("default","0") %>" data-width data-height uk-img>
 			</a>
 		</div>
 		<% end %>
 	</div>
 	<div style="margin-bottom: 30px !important;" class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
-		<div class="sem-year" style="font-size: 25px;">< Anterior</div>
-		<div class="sem-year uk-text-right" style="font-size: 25px;">Siguiente ></div>
+		<div class="sem-year" style="font-size: 25px;"><a id="nxt-yr"></a></div>
+		<div class="sem-year uk-text-right" style="font-size: 25px;"><a id="lst-yr"></a></div>
 	</div>
 </div>
 
