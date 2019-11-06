@@ -3,11 +3,12 @@
 	<span class="titulo-encabezado">Multimedia</span>
 </div>
 <div class="contenido">
-	<div class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m uk-margin-large-bottom" uk-grid>
+	<div class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m uk-margin-large-bottom" uk-grid uk-lightbox>
 		<% @videos-each do |v| %>
 		<div class="seminario uk-text-center">
-			<img class="img-video" data-src="<%= v.thumbnail %>" data-width data-height uk-img>
-			
+			<a href="https://www.youtube.com/watch?v=<%= v.v_id %>" data-caption="<%= v.titulo %>">
+				<img class="img-video" data-src="<%= v.thumbnail %>" data-width data-height uk-img>
+			</a>
 		</div>
 		<% end %>
 	</div>
