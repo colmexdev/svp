@@ -3,7 +3,7 @@ class Persona < ApplicationRecord
 
   attr_accessor :foto_del
 
-  validates_presnece_of :nombre
+  validates_presence_of :nombre
   validates_presence_of :indice
   has_attached_file :foto, styles: {},
       url: '/assets/fotos_personas/:style/:id/:basename.:extension',

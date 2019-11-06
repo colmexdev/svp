@@ -1,5 +1,6 @@
 class Persona < ApplicationRecord
   before_save :delete_foto, if: -> {foto_del == '1'}
+  before_save :update_indice, if: :indice_changed?
 
   attr_accessor :foto_del
 
@@ -15,5 +16,12 @@ class Persona < ApplicationRecord
 
   def delete_foto
     self.foto = nil
+  end
+
+  def update_indice
+    q = Persona.where(indice: self.indice).first
+    if !q.nil?
+      q.update(indice: q.indice + 1)
+    end
   end
 end
