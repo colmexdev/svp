@@ -179,12 +179,20 @@ class PanelController < ApplicationController
       # Modelo para estudiantes del histórico.
       }, "Publicaciones": {
         model: Publicacion,
-        fields: {titulo: "Título", autor: "Autor(es)", edicion: "Edición", descripcion: "Descripción", liga_vid: "Liga al video", indice: "Índice"},
+        fields: {titulo: "Título", autor: "Autor(es)", edicion: "Edición", descripcion: "Descripción", liga_vid: "Liga(s) a video", indice: "Índice"},
         imgs: {portada: "Portada"},
-        textarea: [:autor, :edicion],
+        textarea: [:autor, :edicion, :liga_vid],
         numbers: [:indice],
         trix: [:descripcion],
-        p_text: [:liga_vid, :titulo]
+        p_text: [:titulo]
+      }, "Sesiones": {
+        model: Sesion,
+        fields: {titulo: "Título del evento", descripcion: "Descripción", liga_vid: "Liga(s) a video", pubs: "Publicaciones", fecha_i: "Fecha de inicio", fecha_f: "Fecha de término"},
+        p_text: [:titulo],
+        dates: [:fecha_i, :fecha_f],
+        trix: [:descripcion],
+        textarea: [:liga_vid],
+        check: {pubs: Publicacion.all.map{|x| [x.titulo, x.titulo]}}
       }#, "Sliders": {
       #  model: Slider,
       #  fields: {liga: "Liga", posicion: "Posición del badge", fecha_i: "Fecha de publicación", fecha_f: "Fecha de expiración"},
