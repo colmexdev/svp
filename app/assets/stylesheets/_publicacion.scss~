@@ -1,4 +1,4 @@
-.seccion-pub { padding-top: 70px; padding-bottom: 70px; border-bottom: solid 1px #CCDEDC; }
+.seccion-pub { padding-top: 70px; padding-bottom: 140px; border-bottom: solid 1px #CCDEDC; }
 .img-portada { width: 80%; max-width: 850px; box-shadow: 20px 10px 5px #CCDEDC; }
 .ficha-pub { font-size: 30px !important; color: #595E5D; font-family: "Montserrat"; font-weight: 700; text-transform: uppercase; }
 .outline-negro { text-shadow: 0 1px 1px #595E5D, 0 -1px 1px #595E5D, 1px 0 1px #595E5D, -1px 0 1px #595E5D; }
