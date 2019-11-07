@@ -181,7 +181,7 @@ class PanelController < ApplicationController
         model: Publicacion,
         fields: {titulo: "Título", autor: "Autor(es)", edicion: "Edición", descripcion: "Descripción", liga_vid: "Liga al video", indice: "Índice"},
         imgs: {portada: "Portada"},
-        textarea: [:autor, :edicion },
+        textarea: [:autor, :edicion],
         numbers: [:indice],
         trix: [:descripcion, :titulo],
         p_text: [:liga_vid]

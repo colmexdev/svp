@@ -183,8 +183,8 @@ class PanelController < ApplicationController
         imgs: {portada: "Portada"},
         textarea: [:autor, :edicion],
         numbers: [:indice],
-        trix: [:descripcion, :titulo],
-        p_text: [:liga_vid]
+        trix: [:descripcion],
+        p_text: [:liga_vid, :titulo]
       }#, "Sliders": {
       #  model: Slider,
       #  fields: {liga: "Liga", posicion: "Posición del badge", fecha_i: "Fecha de publicación", fecha_f: "Fecha de expiración"},
