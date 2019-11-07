@@ -2,7 +2,7 @@ class Publicacion < ApplicationRecord
   before_save :update_indice, if: :indice_changed?
   before_save :delete_portada, if: -> {portada_del == '1'}
 
-  attr_accessor :portada
+  attr_accessor :portada_del
 
   validates_presence_of :titulo
   validates_presence_of :indice

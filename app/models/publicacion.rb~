@@ -6,7 +6,7 @@ class Publicacion < ApplicationRecord
 
   validates_presence_of :titulo
   validates_presence_of :indice
-  has_ttached_file :portada, styles: {thumbnail: "850x1167#", thumb_cut: "850x1167!"},
+  has_attached_file :portada, styles: {thumbnail: "850x1167#", thumb_cut: "850x1167!"},
       url: '/assets/portadas_pubs/:style/:id/:basename.:extension',
       path: ':rails_root/public/assets/portadas_pubs/:style/:id/:basename.:extension',
       default_url: '/vacio.png',
