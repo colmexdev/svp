@@ -9,14 +9,14 @@
 		</div>
 		<div>
 			<p>
-				Autoría: <%= p.autor.gsub("\n","<br>").html_safe %><br>
-				Edición: <%= p.edicion.gsub("\n","<br>").html_safe %>
+				Autoría: <%= @pub.autor.gsub("\n","<br>").html_safe %><br>
+				Edición: <%= @pub.edicion.gsub("\n","<br>").html_safe %>
 			</p>
 		</div>
 	</div>
 	<div class="seccion-pub">
 		<span class="texto-rosa titulo">Sobre la <span class="outline blanco">publicación</span></span><br>
-		<%= p.descripcion.html_safe %>
+		<%= @pub.descripcion.html_safe %>
 	</div>
 	<div class="seccion-pub">
 		<span class="texto-verde titulo">Video</span><br>
