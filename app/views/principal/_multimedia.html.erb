@@ -1,7 +1,7 @@
 <% @videos.each do |v| %>
 <div class="seminario uk-text-center">
 	<a href="https://www.youtube.com/watch?v=<%= v.v_id %>" data-caption="<%= v.titulo %>">
-		<img class="img-video" data-src="<%= v.thumbnail.gsub("default","0") %>" data-width data-height uk-img>
+		<img class="img-video" data-src="<%= v.thumbnail.gsub("default","hqdefault") %>" data-width data-height uk-img>
 	</a>
 </div>
 <% end %>
