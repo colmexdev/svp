@@ -1,1 +1,1 @@
-.seccion-pub > div { padding-top: 50px; padding-bottom: 50px; border-bottom: solid 1px #CCDEDC; }
+.seccion-pub { padding-top: 50px; padding-bottom: 50px; border-bottom: solid 1px #CCDEDC; }
