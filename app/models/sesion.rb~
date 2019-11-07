@@ -1,5 +1,5 @@
 class Sesion < ApplicationRecord
-  before_save :empty_pubs, if: -> {pubs_changed? && pubs.nil?}
+  before_save :empty_pubs, if: -> {!params[:sesion][:pubs]}
 
   protected
 
