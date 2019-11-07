@@ -26,7 +26,7 @@ class PrincipalController < ApplicationController
   end
 
   def publicacion
-    @pub = Publicacion.where("unaccent(lower(regexp_replace(titulo,'[^A-Za-z0-9_]+','-','g'))) = ?", params[:pub]).first
+    @pub = Publicacion.where("regexp_replace(lower(unaccent(titulo)),'[^a-z0-9_]+','-','g') = ?", params[:pub]).first
     @title = @pub.titulo.gsub(/<.*?>/,"")
   end
 
