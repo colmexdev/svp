@@ -39,10 +39,10 @@ svg path { all: inherit; }
 		}
 	}
 }
-.titulo-seccion { font-family: "Montserrat"; font-weight: 700; color: #F16F70; outline: #A6A6A6 solid 3px; font-size: 35px; text-transform: uppercase; padding: 10px 30px; display: inline-block; max-width: 1300px; width: 95%; }
+.titulo-seccion { font-family: "Montserrat"; font-weight: 700; color: #F16F70; outline: #A6A6A6 solid 3px; font-size: 35px; text-transform: uppercase; padding: 10px 30px; }
 
 .encabezado-seccion { background-color: #BCE2D3; padding: 60px 0; }
-.titulo-encabezado { color: #F16F70; font-family: "Montserrat"; font-weight: 700; font-size: 80px; text-transform: uppercase; }
+.titulo-encabezado { color: #F16F70; font-family: "Montserrat"; font-weight: 700; font-size: 80px; text-transform: uppercase; display: inline-block; max-width: 1300px; width: 95%; }
 .outline  { text-shadow: 0 1px 1px #F16F70, 0 -1px 1px #F16F70, 1px 0 1px #F16F70, -1px 0 1px #F16F70; color: #BCE2D3; }
 .blanco { color: #FFFFFF !important; }
 .contenido { margin: 0 auto; margin-top: 80px; margin-bottom: 50px; width: 90%; max-width: 1200px;
