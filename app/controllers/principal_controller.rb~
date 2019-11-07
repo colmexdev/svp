@@ -22,6 +22,11 @@ class PrincipalController < ApplicationController
 
   def publicaciones
     @title = "Publicaciones"
+    @publicaciones = Publicacion.order(indice: :asc)
+  end
+
+  def publicacion
+    @pub = Publicacion.where(indice: params[:pub].to_i).first
   end
 
   def multimedia

@@ -9,7 +9,7 @@
 			<a href="#">
 				<img data-src="<%= p.portada.url(:thumbnail) %>" data-width data-height uk-img>
 			</a>
-			<a href="#" class="boton-seminario">Más información</a>
+			<a href="<%= publicacion:path(pub: p.indice) %>" class="boton-seminario">Más información</a>
 		</div>
 		<% end %>
 	</div> 

@@ -25,6 +25,11 @@ class PrincipalController < ApplicationController
     @publicaciones = Publicacion.order(indice: :asc)
   end
 
+  def publicacion
+    @pub = Publicacion.where(indice: params[:pub].to_i).first
+    @title = @pub.titulo.gsub(/<.*?>/,"")
+  end
+
   def multimedia
     @title = "Multimedia"
     @limite = 6

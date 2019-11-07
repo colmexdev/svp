@@ -1,0 +1,25 @@
+<%= render 'principal/header' %>
+<div class="encabezado-seccion uk-text-center">
+	<span class="titulo-encabezado"><%= @pub.titulo.gsub(/<.*?>/,"") %></span>
+</div>
+<div class="contenido">
+	<div class="seccion-pub uk-grid-collapse" uk-grid>
+		<div>
+			<img data-src="<%= @pub.portada.url(:thumbnail)" data-width data-height uk-img>
+		</div>
+		<div>
+			<p>
+				Autoría: <%= p.autor.gsub("\n","<br>").html_safe %><br>
+				Edición: <%= p.edicion.gsub("\n","<br>").html_safe %>
+			</p>
+		</div>
+	</div>
+	<div class="seccion-pub">
+		<span class="texto-rosa titulo">Sobre la <span class="outline blanco">publicación</span></span><br>
+		<%= p.descripcion.html_safe %>
+	</div>
+	<div class="seccion-pub">
+		<span class="texto-verde titulo">Video</span><br>
+	</div>
+</div>
+<%= render 'principal/footer' %>

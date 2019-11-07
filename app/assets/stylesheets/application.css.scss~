@@ -24,6 +24,7 @@
 @import "colaboradores";
 @import "seminarios";
 @import "multimedia";
+@import "publicaciones";
 @import "panel";
 @import "header";
 @import "footer";

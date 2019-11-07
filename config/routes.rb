@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/colaboradores' => 'principal#colaboradores', :as => :colaboradores
   get '/seminarios' => 'principal#seminarios', :as => :seminarios
   get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones
+  get '/publicacion/:pub' => 'principal#publicacion', :as => :publicacion
   get '/multimedia' => 'principal#multimedia', :as => :multimedia
 
   root to: 'principal#inicio'
