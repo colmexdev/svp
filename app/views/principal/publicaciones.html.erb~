@@ -12,13 +12,13 @@
 		</div>
 		<div class="publicacion uk-text-center">
 			<a href="#">
-				<img data-src="<%= image_url('portada1.png') %>" data-width data-height uk-img>
+				<img data-src="<%= image_url('portada2.png') %>" data-width data-height uk-img>
 			</a>
 			<a href="#" class="boton-seminario">Más información</a>
 		</div>
 		<div class="publicacion uk-text-center">
 			<a href="#">
-				<img data-src="<%= image_url('portada1.png') %>" data-width data-height uk-img>
+				<img data-src="<%= image_url('portada3.png') %>" data-width data-height uk-img>
 			</a>
 			<a href="#" class="boton-seminario">Más información</a>
 		</div>

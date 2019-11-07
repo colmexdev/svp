@@ -22,6 +22,7 @@ class PrincipalController < ApplicationController
 
   def publicaciones
     @title = "Publicaciones"
+    @publicaciones = Publicacion.order(indice: :asc)
   end
 
   def multimedia
