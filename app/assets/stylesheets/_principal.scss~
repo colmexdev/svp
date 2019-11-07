@@ -23,10 +23,11 @@ svg path { all: inherit; }
 .texto-verde { color: #8AD6CC !important; }
 
 #acerca { width: 85%; max-width: 1200px; margin: 0 auto; margin-top: 50px; margin-bottom: 30px; color: #595E5D;
-	.titulo { text-transform: uppercase; font-family: "Montserrat"; font-size: 35px; font-weight: 700; }
 	p:nth-child(2) { font-family: "Roboto"; font-weight: 500; font-size: 22px; margin-bottom: 20px; }
 	.negritas { font-weight: 900; }
 }
+
+.titulo { text-transform: uppercase; font-family: "Montserrat"; font-size: 35px; font-weight: 700; }
 
 .boton-leer { font-family: "Montserrat"; font-weight: 600; outline: #8AD6CC solid 2px; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear; transition: all 0.3s linear; background-color: #FFFFFF; color: #303635; font-size: 22px; padding: 10px 25px; text-decoration: none; margin: 20px auto;
 	&:hover { background-color: #8AD6CC; color: #FFFFFF; text-decoration: none; outline: #8AD6CC solid 2px; }
