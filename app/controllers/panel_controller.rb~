@@ -168,8 +168,8 @@ class PanelController < ApplicationController
   # No requiere nada de la Base de Datos.
   def select_set
     @sets = {
-      # Modelo para Personas de Organización (Sobre)
-      "Persona de 'Organización'": {
+      # Modelo para Colaboradores
+      "Colaboradores": {
         model: Persona, 
         fields: {nombre: "Nombre", semblanza: "Semblanza", twitter: "Liga a cuenta Twitter", fb: "Liga a cuenta de Facebook", indice: "Índice"},
         imgs: {foto: "Fotografía"},
@@ -177,6 +177,14 @@ class PanelController < ApplicationController
         numbers: [:indice],
         trix: [:semblanza]
       # Modelo para estudiantes del histórico.
+      }, "Publicaciones": {
+        model: Publicacion,
+        fields: {titulo: "Título", autor: "Autor(es)", edicion: "Edición", descripcion: "Descripción", liga_vid: "Liga al video", indice: "Índice"},
+        imgs: {portada: "Portada"},
+        textarea: [:autor, :edicion },
+        numbers: [:indice],
+        trix: [:descripcion, :titulo],
+        p_text: [:liga_vid]
       }#, "Sliders": {
       #  model: Slider,
       #  fields: {liga: "Liga", posicion: "Posición del badge", fecha_i: "Fecha de publicación", fecha_f: "Fecha de expiración"},
