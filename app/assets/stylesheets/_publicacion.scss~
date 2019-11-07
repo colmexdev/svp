@@ -1,1 +1,2 @@
 .seccion-pub { padding-top: 50px; padding-bottom: 50px; border-bottom: solid 1px #CCDEDC; }
+.img-portada { width: 80%; max-width: 850px; box-shadow: 20px 10px 5px #CCDEDC; }
