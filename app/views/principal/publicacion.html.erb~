@@ -5,7 +5,7 @@
 <div class="contenido">
 	<div class="seccion-pub uk-grid-collapse" uk-grid>
 		<div>
-			<img data-src="<%= @pub.portada.url(:thumbnail)" data-width data-height uk-img>
+			<img data-src="<%= @pub.portada.url(:thumbnail) %>" data-width data-height uk-img>
 		</div>
 		<div>
 			<p>
