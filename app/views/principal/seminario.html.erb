@@ -32,7 +32,7 @@
 		<% end %>
 	</div>
 	<% end %>
-	<% if @pubs %>
+	<% if @pubs.size > 0 %>
 	<div class="seccion-pub">
 		<span class="titulo">Documento <span class="outline blanco">relacionado</span></span><br>
 		<% @pubs.all.each do |pub| %>
