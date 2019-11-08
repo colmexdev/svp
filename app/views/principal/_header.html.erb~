@@ -43,6 +43,8 @@
 	window.addEventListener("resize", function(){
 		document.querySelector(".uk-navbar-left").style.height = document.querySelector(".uk-navbar-right").offsetHeight + "px";
 	});
+
+	window.dispatchEvent(new Event("resize"));
 </script>
 
 
