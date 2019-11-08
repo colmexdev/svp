@@ -23,7 +23,7 @@
 			</ul>
 		</div>
 		<div class="uk-navbar-left uk-text-center logo-holder sticky">
-			<a href="<%= root_path %>">
+			<a class="uk-flex" href="<%= root_path %>">
 				<img class="logo-svp" data-src="<%= image_url("logo-svp-color.svg") %>" data-width data-height uk-img>
 			</a>
 		</div>
@@ -39,5 +39,12 @@
 		</div>
 	</nav>
 </div>
+<script>
+	window.addEventListener("resize", function(){
+		document.querySelector(".uk-navbar-left").style.height = document.querySelector(".uk-navbar-right").offsetHeight + "px";
+	});
+
+	window.dispatchEvent(new Event("resize"));
+</script>
 
 

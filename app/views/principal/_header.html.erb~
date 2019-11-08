@@ -16,14 +16,14 @@
 		<div class="uk-width-1-1 uk-text-center fixed" style="margin-top: 10px;">
 			<ul class="uk-inline-block" id="menu-header">
 				<li><a class="<%= action_name == 'acerca' ? "active" : "" %>" href="<%= acerca_path %>">Acerca de</a></li>
-				<li><a class="<%= action_name == seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a></li>
+				<li><a class="<%= action_name == 'seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a></li>
 				<li><a class="<%= action_name == 'publicaciones' ? "active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 				<li><a class="<%= action_name == 'multimedia' ? "active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
 				<li><a href="#">Cursos</a></li>
 			</ul>
 		</div>
 		<div class="uk-navbar-left uk-text-center logo-holder sticky">
-			<a href="<%= root_path %>">
+			<a class="uk-flex" href="<%= root_path %>">
 				<img class="logo-svp" data-src="<%= image_url("logo-svp-color.svg") %>" data-width data-height uk-img>
 			</a>
 		</div>
@@ -39,5 +39,10 @@
 		</div>
 	</nav>
 </div>
+<script>
+	window.addEventListener("resize", function(){
+		document.querySelector(".uk-navbar-left").style.height = document.querySelector(".uk-navbar-right").offsetHeight + "px";
+	});
+</script>
 
 
