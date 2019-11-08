@@ -3,12 +3,13 @@
 	<span class="titulo-encabezado"><%= @sem.titulo.gsub(/<.*?>/,"") %></span>
 </div>
 <div class="contenido">
-	<% if @sem.descripcion.present? %>
 	<div class="seccion-pub">
+		<img id="img-agenda">
+		<% if @sem.descripcion.present? %>
 		<span class="titulo desc-pub">Sobre la <span class="outline blanco">sesión</span></span><br>
 		<%= @sem.descripcion.gsub(/<(\/?)div>/,'<\1p>').html_safe %>
+		<% end %>
 	</div>
-	<% end %>
 	<% if @sem.liga_vid.present? %>
 	<div class="seccion-pub">
 		<span class="titulo">Video</span><br>
@@ -40,8 +41,8 @@
 				<div class="portada-pub uk-text-center uk-width-1-3@m">
 					<img data-src="<%= pub.portada.url(:thumbnail) %>" data-width data-height uk-img>
 				</div>
-				<div class="desc-pub uk-position-relative uk-width-2-3@m">
-					<p class="uk-position-bottom ficha-pub">
+				<div class="desc-pub uk-width-2-3@m uk-flex">
+					<p class="ficha-pub">
 						<span class="outline-negro blanco">Autoría:</span> <%= pub.autor.gsub("\n","<br>").html_safe %><br>
 						<% if pub.edicion.present? %>
 						<span class="outline-negro blanco">Edición:</span> <%= pub.edicion.gsub("\n","<br>").html_safe %>
@@ -54,10 +55,20 @@
 	<% end %>
 </div>
 <script>
-	window.addEventListener("resize",function(){
+	document.addEventListener("DOMContentLoaded", function(){
+		var xhr = new XMLHttpRequest();
+		xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?titulo=<%= @sem.titulo %>");
+		xhr.onload = function(){
+			if(xhr.status === 200){
+				var data = JSON.parse(xhr.response);
+				document.querySelector("#img-agenda").setAttribute("src", data["videos"][0]["ligaImagen"]);
+			}
+		}
+		xhr.send();
+	});
+	window.addEventListener("resize", function(){
 		document.querySelector(".video-princ").style.height = document.querySelector(".video-princ").offsetWidth * (9/16) + "px";
 	});
-
 	window.dispatchEvent(new Event("resize"));
 </script>
 <%= render 'principal/footer' %>
