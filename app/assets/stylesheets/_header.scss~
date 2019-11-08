@@ -70,7 +70,7 @@ a:hover { text-decoration: none;
 }
 #modal-menu { display: none; }
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 1391px){
 	#menu-header { display: none; }
 	#modal-menu { display: flex; }
 	.logo-holder.fixed {display: none !important; }
