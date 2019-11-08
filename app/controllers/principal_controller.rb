@@ -22,7 +22,7 @@ class PrincipalController < ApplicationController
 
   def seminario
     @sem = Sesion.where("regexp_replace(lower(unaccent(titulo)),'[^a-z0-9_]+','-','g') = ?", params[:sem]).first
-    @pubs = Publicacion.where(title: (JSON.parse(@sem.pubs).reject{|x| x.empty?}.size > 0 ? JSON.parse(@sem.pubs).reject{|x| x.empty?} : ",")).all
+    @pubs = Publicacion.where(titulo: (JSON.parse(@sem.pubs).reject{|x| x.empty?}.size > 0 ? JSON.parse(@sem.pubs).reject{|x| x.empty?} : ",")).all
     @title = @sem.titulo
   end
 
