@@ -1,4 +1,5 @@
 .seccion-pub { padding-top: 50px; padding-bottom: 80px; border-bottom: solid 1px #CCDEDC;
+	&:first-child { padding-top: 0; }
 	&:last-child { border-bottom: none; }
 	&:nth-child(odd) .titulo { color: #F16F70 !important; 
 		.outline { text-shadow: 0 1px 1px #F16F70, 0 -1px 1px #F16F70, 1px 0 1px #F16F70, -1px 0 1px #F16F70; }
@@ -14,4 +15,4 @@
 .video-princ { display: block; margin: 35px auto; width: 80%; max-width: 1000px; }
 .grid-pub-sem { width: 80%; margin: 35px auto; }
 .portada-pub img { max-width: 290px; height: auto; width: 65%; }
-#img-agenda { max-width: 1000px; width: 90%; display: block; margin: 25px auto; }
+#img-agenda { max-width: 1000px; width: 90%; display: block; margin: 45px auto; margin-top: 0; }
