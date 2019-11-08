@@ -20,7 +20,7 @@
 				<% (i - 1) % 3 == 0 %>
 				<div class="uk-grid-collapse uk-child-width-1-3@s" uk-grid uk-lightbox>
 				<% end %>
-				<div>
+				<div class="thumb-video">
 					<a href="https://www.youtube.com/watch?v=<%= v_id %>">
 						<img data-src="http://img.youtube.com/vi/<%= v_id %>/hqdefault.jpg" data-width data-height uk-img>
 					</a>
