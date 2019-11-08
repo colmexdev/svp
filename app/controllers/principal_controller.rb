@@ -20,6 +20,12 @@ class PrincipalController < ApplicationController
     end
   end
 
+  def seminario
+    @sem = Sesion.where("regexp_replace(lower(unaccent(titulo)),'[^a-z0-9_]+','-','g') = ?", params[:sem]).first
+    @pubs = Publicacion.where(title: JSON.parse(@sem.pubs).reject{|x| x.empty?})
+    @title = @sem.titulo
+  end
+
   def publicaciones
     @title = "Publicaciones"
     @publicaciones = Publicacion.order(indice: :asc)

@@ -1,4 +1,8 @@
-.seccion-pub { padding-top: 50px; padding-bottom: 80px; border-bottom: solid 1px #CCDEDC; }
+.seccion-pub { padding-top: 50px; padding-bottom: 80px; border-bottom: solid 1px #CCDEDC;
+	&:last-child { border-bottom: none; }
+	&:nth-child(odd) .titulo { color: #F16F70 !important; }
+	&:nth-child(even) .titulo { color: #8AD6CC !important; }
+}
 .img-portada { width: 80%; max-width: 850px; box-shadow: 20px 10px 5px #CCDEDC; }
 .ficha-pub { font-size: 30px !important; color: #595E5D; font-family: "Montserrat"; font-weight: 700; text-transform: uppercase; }
 .outline-negro { text-shadow: 0 1px 1px #595E5D, 0 -1px 1px #595E5D, 1px 0 1px #595E5D, -1px 0 1px #595E5D; }

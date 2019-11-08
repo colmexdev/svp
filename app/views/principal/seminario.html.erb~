@@ -1,0 +1,23 @@
+<%= render 'principal/header' %>
+<div class="encabezado-seccion uk-text-center">
+	<span class="titulo-encabezado"><%= @sem.titulo.gsub(/<.*?>/,"") %></span>
+</div>
+<div class="contenido">
+	<% if @sem.descripcion.present? %>
+	<div class="seccion-pub">
+		<span class="titulo desc-pub">Sobre la <span class="outline blanco">sesión</span></span><br>
+		<%= @sem.descripcion.gsub(/<(\/?)div>/,'<\1p>').html_safe %>
+	</div>
+	<% end %>
+	<% if @sem.liga_vid.present? %>
+	<div class="seccion-pub">
+		<span class="titulo">Video</span><br>
+	</div>
+	<% end %>
+	<% if @sem.liga_vid.present? %>
+	<div class="seccion-pub">
+		<span class="titulo">Video</span><br>
+	</div>
+	<% end %>
+</div>
+<%= render 'principal/footer' %>

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/acerca-de' => 'principal#acerca', :as => :acerca
   get '/colaboradores' => 'principal#colaboradores', :as => :colaboradores
   get '/seminarios' => 'principal#seminarios', :as => :seminarios
+  get '/seminario/:sem' => 'principal#seminario', :as => :seminario
   get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones
   get '/publicacion/:pub' => 'principal#publicacion', :as => :publicacion
   get '/multimedia' => 'principal#multimedia', :as => :multimedia
