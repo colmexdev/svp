@@ -12,11 +12,44 @@
 	<% if @sem.liga_vid.present? %>
 	<div class="seccion-pub">
 		<span class="titulo">Video</span><br>
+		<% @sem.liga_vid.split(/ *\n */).each_with_index do |v,i| %>
+			<% v_id = (v.include?("youtube") ? v.scan(/v=([^&]*)/)[0][0] : v.split("/")[3].gsub(/(&)|(\/).*/,"") %>
+			<% @sem.liga_vid.split(/ *\n */).size == 1 || i == 0 %>
+				<iframe src="https://www.youtube.com/embed/<%= v_id  %>" allowfullscreen>
+			<% else %>
+				<% (i - 1) % 3 == 0 %>
+				<div class="uk-grid-collapse uk-child-width-1-3@s" uk-grid uk-lightbox>
+				<% end %>
+				<div>
+					<a href="https://www.youtube.com/watch?v=<%= v_id %>">
+						<img data-src="http://img.youtube.com/vi/<%= v_id %>/hqdefault.jpg" data-width data-height uk-img>
+					</a>
+				</div>
+				<% (i - 1) % 3 == 2 || i - 1 == @sem.liga_vid.split(/ *\n */).size %>
+				</div>
+				<% end %>
+			<% end %>
+		<% end %>
 	</div>
 	<% end %>
-	<% if @sem.liga_vid.present? %>
+	<% if @pubs %>
 	<div class="seccion-pub">
-		<span class="titulo">Video</span><br>
+		<span class="titulo">Documento <span class="outline blanco">relacionado</span></span><br>
+		<% @pubs.all.each do |pub| %>
+			<div class="uk-grid-collapse uk-child-width-1-2@m" uk-grid>
+				<div class="portada-pub uk-text-right">
+					<img data-src="<%= pub.portada.url(:thumbnail) %>" data-width data-height uk-img>
+				</div>
+				<div class="desc-pub uk-position-relative">
+					<p class="uk-position-bottom ficha-pub">
+						<span class="outline-negro blanco">Autoría:</span> <%= pub.autor.gsub("\n","<br>").html_safe %><br>
+						<% if pub.edicion.present? %>
+						<span class="outline-negro blanco">Edición:</span> <%= pub.edicion.gsub("\n","<br>").html_safe %>
+						<% end %>
+					</p>
+				</div>
+			</div>
+		<% end %>
 	</div>
 	<% end %>
 </div>
