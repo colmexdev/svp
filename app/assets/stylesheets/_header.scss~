@@ -73,5 +73,4 @@ a:hover { text-decoration: none;
 	#menu-header { display: none; }
 	#modal-menu { display: block; }
 	.fixed { display: none !important; }
-	.sticky { display: flex !important; }
 }
