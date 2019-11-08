@@ -43,7 +43,7 @@
 	</div>
 <% end %>
 <% @imgs.each do |k,v| %>
-	<% atc_cont_id = "#{@models.to_s.gsub(/.([A-Z])/,'_\1').downcase}_#{k.to_s}" %>
+	<% atc_cont_id = "#{@models.to_s.gsub(/(.)([A-Z])/,'\1_\2').downcase}_#{k.to_s}" %>
   <div class="field field-media">
 		<div class="photo-upload">
     <%= f.label k, raw("<i class=\"fa fa-upload\"></i>Añadir #{v.is_a?(Array) ? v[0].mb_chars.downcase : v.mb_chars.downcase}"), class: "lab-img" %><br>
