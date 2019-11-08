@@ -67,3 +67,11 @@ a:hover { text-decoration: none;
 		.sticky { display: flex; }
 	}
 }
+#modal-menu { display: none; }
+
+@media only screen and (max-width: 960px){
+	#menu-header { display: none; }
+	#modal-menu { display: block; }
+	.fixed { display: none !important; }
+	.sticky { display: flex !important; }
+}

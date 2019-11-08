@@ -15,4 +15,4 @@
 .video-princ { display: block; margin: 35px auto; width: 80%; max-width: 1000px; }
 .grid-pub-sem { width: 80%; margin: 35px auto; }
 .portada-pub img { max-width: 290px; height: auto; width: 65%; }
-#img-agenda { max-width: 1000px; width: 90%; display: block; margin: 25px auto; }
+#img-agenda { max-width: 1000px; width: 90%; display: block; margin: 45px auto; margin-top: 0; }
