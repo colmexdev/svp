@@ -11,4 +11,5 @@
 .ficha-pub { font-size: 30px !important; color: #595E5D; font-family: "Montserrat"; font-weight: 700; text-transform: uppercase; }
 .outline-negro { text-shadow: 0 1px 1px #595E5D, 0 -1px 1px #595E5D, 1px 0 1px #595E5D, -1px 0 1px #595E5D; }
 .desc-pub { margin-top: 25px; }
-.video-princ { display: block; margin: 20px auto; width: 80%; max-width: 1000px; }
+.video-princ { display: block; margin: 35px auto; width: 80%; max-width: 1000px; }
+.portada-pub img { max-width: 250px; height: auto; width: 50%; }
