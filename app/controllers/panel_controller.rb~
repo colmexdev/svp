@@ -118,7 +118,7 @@ class PanelController < ApplicationController
     @obj = @sets[params[:set].to_sym][:model].find(params[:id])
     respond_to do |format|
       @checks.each do |c|
-        params[@models.to_s.underscore.to_sym][c] |= nil
+        params[@models.to_s.underscore.to_sym][c] ||= nil
       end
       if @obj.update(obj_params)
         format.js { render :mostrar, params: {set: params[:set], id: @obj.id}, notice: 'Objeto generado exitosamente.' }
