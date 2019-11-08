@@ -36,7 +36,7 @@
 		  	<%= f.check_box k, {multiple: true, checked: @obj.public_send(k) && @obj.public_send(k).include?(v)}, v, nil %>
 				<%= f.label k, t %><br>
 			<% end %>
-			<%= f.hidden_field k, nil %>
+			<%= f.hidden_field k, multiple: true, value: [] %>
 		<% elsif @numbers.include?(k) %>
 			<%= f.number_field k, min: 1, step: 1, value: (@obj.public_send(k) || 1), required: (@presence.include?(k) ? "required" : false) %>
 		<% end %>
