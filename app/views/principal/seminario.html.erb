@@ -12,10 +12,10 @@
 	<% if @sem.liga_vid.present? %>
 	<div class="seccion-pub">
 		<span class="titulo">Video</span><br>
-		<% @sem.liga_vid.split(/ *\n */).each_with_index do |v,i| %>
+		<% @sem.liga_vid.split(/ *\n */).reject{|x| x.empty?}.each_with_index do |v,i| %>
 			<% v_id = (v.include?("youtube") ? v.scan(/v=([^&]*)/)[0][0] : v.split("/")[3].gsub(/(&)|(\/).*/,"")) %>
 			<% if @sem.liga_vid.split(/ *\n */).size == 1 || i == 0 %>
-				<iframe class="video-princ" src="https://www.youtube.com/embed/<%= v_id  %>" allowfullscreen>
+				<iframe class="video-princ" src="https://www.youtube.com/embed/<%= v_id  %>" allowfullscreen></iframe>
 			<% else %>
 				<% if (i - 1) % 3 == 0 %>
 				<div class="uk-grid-collapse uk-child-width-1-3@s" uk-grid uk-lightbox>
@@ -25,7 +25,7 @@
 						<img data-src="http://img.youtube.com/vi/<%= v_id %>/hqdefault.jpg" data-width data-height uk-img>
 					</a>
 				</div>
-				<% if (i - 1) % 3 == 2 || i - 1 == @sem.liga_vid.split(/ *\n */).size %>
+				<% if (i - 1) % 3 == 2 || i == @sem.liga_vid.split(/ *\n */).size %>
 				</div>
 				<% end %>
 			<% end %>
