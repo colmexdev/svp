@@ -13,7 +13,7 @@
 	<div class="seccion-pub">
 		<span class="titulo">Video</span><br>
 		<% @sem.liga_vid.split(/ *\n */).each_with_index do |v,i| %>
-			<% v_id = (v.include?("youtube") ? v.scan(/v=([^&]*)/)[0][0] : v.split("/")[3].gsub(/(&)|(\/).*/,"") %>
+			<% v_id = (v.include?("youtube") ? v.scan(/v=([^&]*)/)[0][0] : v.split("/")[3].gsub(/(&)|(\/).*/,"")) %>
 			<% @sem.liga_vid.split(/ *\n */).size == 1 || i == 0 %>
 				<iframe src="https://www.youtube.com/embed/<%= v_id  %>" allowfullscreen>
 			<% else %>
