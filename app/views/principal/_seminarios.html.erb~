@@ -4,16 +4,18 @@
 	<a class="boton-seminario" href="<%= seminario_path(sem: s.titulo.parameterize) %>">Más información</a>
 </div>
 <script>
-var xhr<%= i %> = new XMLHttpRequest();
-xhr<%= i %>.open("get","https://www.colmex.mx/catalogo_eventos.json?titulo=<%= s.titulo %>");
-xhr<%= i %>.onload = function(){
-	if(xhr<%= i %>.status === 200){
-		var data = JSON.parse(xhr<%= i %>.response);
-		if(data["videos"].length > 0){
-			document.querySelector("#img-sem-<%= i %>").setAttribute("src",data["videos"][0]["ligaImagen"]);
+window.addEventListener("load",function(){
+	var xhr<%= i %> = new XMLHttpRequest();
+	xhr<%= i %>.open("get","https://www.colmex.mx/catalogo_eventos.json?titulo=<%= s.titulo %>");
+	xhr<%= i %>.onload = function(){
+		if(xhr<%= i %>.status === 200){
+			var data = JSON.parse(xhr<%= i %>.response);
+			if(data["videos"].length > 0){
+				document.querySelector("#img-sem-<%= i %>").setAttribute("src",data["videos"][0]["ligaImagen"]);
+			}
 		}
-	}
-};
-xhr<%= i %>.send();
+	};
+	xhr<%= i %>.send();
+});
 </script>
 <% end %>
