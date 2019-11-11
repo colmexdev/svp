@@ -76,5 +76,5 @@ a:hover { text-decoration: none;
 	#modal-menu { display: flex; }
 	.logo-holder.fixed {display: none !important; }
 	.uk-navbar-left, .uk-navbar-right { display: flex !important; }
-	#header nav { display: flex !important; padding-bottom: 20px; }
+	#header nav { display: flex !important; padding-bottom: 0; }
 }

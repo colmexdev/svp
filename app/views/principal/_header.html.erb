@@ -42,7 +42,12 @@
 <div id="menu-lateral" uk-offcanvas="overlay: true; flip: true">
 	<div class="uk-offcanvas-bar">
 		<ul class="uk-nav uk-nav-default">
-			<li class="uk-active"><a href="#">Active</a></li>
+			<li class="<%= action_name == 'acerca' ? "uk-active" : "" %>"><a href="<%= acerca_path %>">Acerca de</a></li>
+			<li class="<%= action_name == 'colaboradores' ? "uk-active" : "" %>"><a href="<%= colaboradores_path %>">Colaboradores</a></li>
+			<li class="<%= action_name == 'seminarios' ? "uk-active" : "" %>"><a href="<%= seminarios_path %>">Seminarios</a></li>
+			<li class="<%= action_name == 'publicaciones' ? "uk-active" : "" %>"><a href="<%= publicaciones_path %>">Publicaciones</a></li>
+			<li class="<%= action_name == 'multimedia' ? "uk-active" : "" %>"><a href="<%= multimedia_path %>">Multimedia</a></li>
+			<% if false %>
 			<li class="uk-parent">
 				<a href="#">Parent</a>
 				<ul class="uk-nav-sub">
@@ -50,11 +55,7 @@
 					<li><a href="#">Sub item</a></li>
 				</ul>
 			</li>
-			<li class="uk-nav-header">Header</li>
-			<li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
-			<li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
-			<li class="uk-nav-divider"></li>
-			<li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+			<% end %>
 		</ul>
 	</div>
 </div>
