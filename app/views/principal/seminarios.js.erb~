@@ -1,4 +1,18 @@
 document.querySelector("#grid-seminarios").innerHTML = "<%= j render partial: 'seminarios' %>";
+var sems = <%= @sems.to_json.html_safe %>;
+for(var i = 0; i < sems.length; i++){
+	var xhr = new XMLHttpRequest();
+	xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?titulo=<%= s.titulo %>");
+	xhr.onload = function(){
+		if(xhr.status === 200){
+			var data = JSON.parse(xhr.response);
+			if(data["videos"].length > 0){
+				document.querySelector("#img-sem-" + i).setAttribute("data-src",data["videos"][0]["ligaImagen"]);
+			}
+		}
+	};
+	xhr.send();
+}
 document.querySelector("#nxt-yr").innerHTML = "< <%= params[:anio] ? params[:anio].to_i + 1 : Sesion.maximum(:fecha_i).year + 1 %>";
 document.querySelector("#nxt-yr").setAttribute("href","<%= seminarios_path(anio: (params[:anio] ? params[:anio].to_i + 1 : Sesion.maximum(:fecha_i).year + 1)) %>");
 document.querySelector("#lst-yr").innerHTML = "<%= params[:anio] ? params[:anio].to_i - 1 : Sesion.maximum(:fecha_i).year - 1 %> >";
