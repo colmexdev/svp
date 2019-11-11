@@ -6,7 +6,7 @@ document.querySelector("#lst-yr").setAttribute("href","<%= seminarios_path(anio:
 var sems = <%= @sems.to_json.html_safe %>;
 for(var i = 0; i < sems.length; i++){
 	var xhr = new XMLHttpRequest();
-	xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?titulo=" + sems[i]["titulo"]);
+	xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?titulo=" + encodeURIComponent(sems[i]["titulo"]),false);
 	console.log(sems[i]["titulo"]);
 	xhr.onload = function(){
 		if(xhr.status === 200){
