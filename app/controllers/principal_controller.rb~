@@ -14,6 +14,7 @@ class PrincipalController < ApplicationController
 
   def seminarios
     @title = "Seminarios"
+    @sems = Sesion.where("date_part('year', fecha_i) = ?", (params[:anio] ? params[:anio] : Sesion.maximum(:fecha_i).year.to_s))
     respond_to do |format|
       format.html
       format.js
@@ -22,7 +23,7 @@ class PrincipalController < ApplicationController
 
   def seminario
     @sem = Sesion.where("regexp_replace(lower(unaccent(titulo)),'[^a-z0-9_]+','-','g') = ?", params[:sem]).first
-    @pubs = Publicacion.where(title: (JSON.parse(@sem.pubs).reject{|x| x.empty?}.size > 0 ? JSON.parse(@sem.pubs).reject{|x| x.empty?} : ",")).all
+    @pubs = Publicacion.where(titulo: (JSON.parse(@sem.pubs).reject{|x| x.empty?}.size > 0 ? JSON.parse(@sem.pubs).reject{|x| x.empty?} : ",")).all
     @title = @sem.titulo
   end
 

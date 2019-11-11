@@ -14,6 +14,7 @@ class PrincipalController < ApplicationController
 
   def seminarios
     @title = "Seminarios"
+    @sems = Sesion.where("date_part('year', fecha_i) = ?", (params[:anio] ? params[:anio] : Sesion.maximum(:fecha_i).year.to_s))
     respond_to do |format|
       format.html
       format.js
