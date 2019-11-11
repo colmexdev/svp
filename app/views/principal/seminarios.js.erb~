@@ -1,5 +1,6 @@
 document.querySelector("#grid-seminarios").innerHTML = "<%= j render partial: 'seminarios' %>";
 var sems = <%= @sems.to_json.html_safe %>;
+console.log(sems);
 for(var i = 0; i < sems.length; i++){
 	var xhr = new XMLHttpRequest();
 	xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?titulo=" + sems[i]["titulo"]);
