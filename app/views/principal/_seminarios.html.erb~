@@ -11,7 +11,7 @@ window.addEventListener("load",function(){
 		if(xhr<%= i %>.status === 200){
 			var data = JSON.parse(xhr<%= i %>.response);
 			if(data["videos"].length > 0){
-				document.querySelector("#img-sem-<%= i %>").setAttribute("src",data["videos"][0]["ligaImagen"]);
+				document.querySelector("#img-sem-<%= i %>").setAttribute("data-src",data["videos"][0]["ligaImagen"]);
 			}
 		}
 	};
