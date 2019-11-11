@@ -19,7 +19,7 @@ if(document.readyState == "complete"){
 		};
 		xhr.send();
 	}
-};
+}
 /*var xhr = new XMLHttpRequest();
 xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?categoria=Seminario sobre Violencia y Paz&ordercrono=desc&anio=<%= params[:anio] ? params[:anio] : '2019' %>");
 xhr.onload = function(){
