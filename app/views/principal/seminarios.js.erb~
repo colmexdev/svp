@@ -1,5 +1,5 @@
 document.querySelector("#grid-seminarios").innerHTML = "<%= j render partial: 'seminarios' %>";
-document.querySelector("#nxt-yr").innerHTML = "<%= params[:anio] ? params[:anio].to_i + 1 : Sesion.maximum(:fecha_i).year + 1 %> >";
+document.querySelector("#nxt-yr").innerHTML = "< <%= params[:anio] ? params[:anio].to_i + 1 : Sesion.maximum(:fecha_i).year + 1 %>";
 document.querySelector("#nxt-yr").setAttribute("href","<%= seminarios_path(anio: (params[:anio] ? params[:anio].to_i + 1 : Sesion.maximum(:fecha_i).year + 1)) %>");
 document.querySelector("#lst-yr").innerHTML = "<%= params[:anio] ? params[:anio].to_i - 1 : Sesion.maximum(:fecha_i).year - 1 %> >";
 document.querySelector("#lst-yr").setAttribute("href","<%= seminarios_path(anio: (params[:anio] ? params[:anio].to_i - 1 : Sesion.maximum(:fecha_i).year - 1)) %>");
