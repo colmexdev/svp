@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get '/' => 'principal#inicio', :as => :inicio
   get '/acerca-de' => 'principal#acerca', :as => :acerca
   get '/colaboradores' => 'principal#colaboradores', :as => :colaboradores
-  get '/seminarios' => 'principal#seminarios', :as => :seminarios
+  get '/seminarios(-:anio)' => 'principal#seminarios', :as => :seminarios
   get '/seminario/:sem' => 'principal#seminario', :as => :seminario
   get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones
   get '/publicacion/:pub' => 'principal#publicacion', :as => :publicacion
