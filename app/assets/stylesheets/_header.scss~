@@ -58,6 +58,7 @@ a:hover { text-decoration: none;
 					transition: width 0.3s ease 0s, left 0.3s ease 0s;
 					width: 100%;
 				}
+				.uk-navbar-dropdown { width: auto; }
 			}
 		}
 	}
