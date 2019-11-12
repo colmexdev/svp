@@ -13,8 +13,9 @@ a:hover { text-decoration: none;
 	.fixed { display: block; }
 	.sticky { display: none; }
 	#menu-header, .uk-navbar-nav { list-style-type: none;
-		> li { float: left; padding: 10px 10px; font-size: 21px;
-			> a { color: #4D4F4E;
+		> li { float: left; padding: 10px 10px;
+			> a, a { color: #4D4F4E;
+				font-size: 21px;
 				min-height: 0;
 				text-transform: uppercase;
 				text-decoration: none;
