@@ -14,8 +14,15 @@
 			</a>
 		</div>
 		<div class="uk-width-1-1 uk-text-center fixed" style="margin-top: 10px;">
-			<ul class="uk-inline-block" id="menu-header">
-				<li><a class="<%= action_name == 'acerca' ? "active" : "" %>" href="<%= acerca_path %>">Acerca de</a></li>
+			<ul class="uk-inline-block uk-navbar-nav" id="menu-header">
+				<li>
+					<a class="<%= action_name == 'acerca' ? "active" : "" %>" href="<%= acerca_path %>">Acerca de</a>
+					<div class="uk-navbar-dropdown">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a class="<%= action_name == 'colaboradores' ? "active" : "" %>" href="<%= colaboradores_path %>">Colaboradores</a></li>
+						</ul>
+					</div>
+				</li>
 				<li><a class="<%= action_name == 'seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a></li>
 				<li><a class="<%= action_name == 'publicaciones' ? "active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 				<li><a class="<%= action_name == 'multimedia' ? "active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
@@ -28,8 +35,15 @@
 			</a>
 		</div>
 		<div class="uk-navbar-right uk-text-center sticky">
-			<ul class="uk-inline-block" id="menu-header">
-				<li><a class="<%= action_name == 'acerca' ? "active" : "" %>" href="<%= acerca_path %>">Acerca de</a></li>
+			<ul class="uk-inline-block uk-navbar-nav" id="menu-header">
+				<li>
+					<a class="<%= action_name == 'acerca' ? "active" : "" %>" href="<%= acerca_path %>">Acerca de</a>
+					<div class="uk-navbar-dropdown">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a class="<%= action_name == 'colaboradores' ? "active" : "" %>" href="<%= colaboradores_path %>">Colaboradores</a></li>
+						</ul>
+					</div>
+				</li>
 				<li><a class="<%= action_name == 'seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a></li>
 				<li><a class="<%= action_name == 'publicaciones' ? "active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 				<li><a class="<%= action_name == 'multimedia' ? "active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
