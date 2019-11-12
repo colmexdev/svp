@@ -188,6 +188,7 @@ class PanelController < ApplicationController
       }, "Sesiones": {
         model: Sesion,
         fields: {titulo: "Título del evento", descripcion: "Descripción", liga_vid: "Liga(s) a video", pubs: "Publicaciones", fecha_i: "Fecha de inicio", fecha_f: "Fecha de término"},
+        imgs: {banner: "Banner del evento (opcional)"},
         p_text: [:titulo],
         dates: [:fecha_i, :fecha_f],
         trix: [:descripcion],
