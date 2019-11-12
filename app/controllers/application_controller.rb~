@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def set_seminarios
     @anios = Seminario.pluck("date_part('year', fecha_i)").sort.reverse
+    logger.debug @anios
   end
 
   def after_sign_in_path_for(resource)

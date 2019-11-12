@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_seminarios
-    @anios = Seminario.pluck("date_part('year', fecha_i)").sort.reverse
+    @anios = Sesion.pluck("date_part('year', fecha_i)").sort.reverse
     logger.debug @anios
   end
 
