@@ -9,7 +9,7 @@ class Publicacion < ApplicationRecord
   has_attached_file :portada, styles: {thumbnail: "850x1167#", thumb_cut: "850x1167!"},
       url: '/assets/portadas_pubs/:style/:id/:basename.:extension',
       path: ':rails_root/public/assets/portadas_pubs/:style/:id/:basename.:extension',
-      default_url: '/vacio.png',
+      default_url: '/portada.png',
       convert_options: {all: "-background white -flatten +matte"}
   validates_attachment_content_type :portada, content_type: ["image/jpg", "image/jpeg", "image/png"]
 
