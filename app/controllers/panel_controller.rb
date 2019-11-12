@@ -152,16 +152,11 @@ class PanelController < ApplicationController
   # - keyword: La palabra clave registrada en el respectivo campo de filtrado.
   # Regresa una cadena que representa el query a la Base de Datos para buscar con respecto de la palabra clave.
   def query(keyword)
-    @query = "("
-    keys = keyword.split(/ +/).map {|k| " like lower('%" + k + "%')"}
-    @fields.keys.each do |f|
-      h = ""
-      keys.each_with_index do |k,i|
-        h =  h + "lower(" + f.to_s + ")" + k + (i == keys.size - 1 ? '' : ' AND ')
-      end
-      @query = @query + h + (f == @fields.keys[-1] ? ")" : " or ")
+    or_query = "("
+    (@models.columns_hash.keys - ["id", "created_at", "updated_at"]).each do |k|
+      or_query = or_query + (or_query != "(" ? " OR " : "") + "unaccent(lower(text(" + k + "))) ilike '%" + keyword.mb_chars.normalize(:kd).gsub(/[^\x00-\x7F]/n,'').downcase.gsub('%',"¸%").gsub("_","¸_") + "%' escape '¸'"
     end
-    return @query
+    return or_query + ")"
   end
   # Variable que almacena los modelos de Base de Datos con sus respectivos campos desglosados para ensamblar el formulario de generación/edición.
   # No recibe parámetros.
