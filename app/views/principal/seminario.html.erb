@@ -4,7 +4,7 @@
 </div>
 <div class="contenido">
 	<div class="seccion-pub">
-		<img id="img-agenda">
+		<img id="img-agenda" data-src="<%= @sem.banner.present? ? @sem.banner.url : '' %>" data-width data-height uk-img>
 		<% if @sem.descripcion.present? %>
 		<span class="titulo desc-pub">Sobre la <span class="outline blanco">sesión</span></span><br>
 		<%= @sem.descripcion.gsub(/<(\/?)div>/,'<\1p>').html_safe %>
@@ -61,7 +61,9 @@
 		xhr.onload = function(){
 			if(xhr.status === 200){
 				var data = JSON.parse(xhr.response);
-				document.querySelector("#img-agenda").setAttribute("src", data["videos"][0]["ligaImagen"]);
+				if(data["videos"].length > 0){
+					document.querySelector("#img-agenda").setAttribute("src", data["videos"][0]["ligaImagen"]);
+				}
 			}
 		}
 		xhr.send();

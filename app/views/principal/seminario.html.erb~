@@ -4,7 +4,7 @@
 </div>
 <div class="contenido">
 	<div class="seccion-pub">
-	
+		<img id="img-agenda">
 		<% if @sem.descripcion.present? %>
 		<span class="titulo desc-pub">Sobre la <span class="outline blanco">sesión</span></span><br>
 		<%= @sem.descripcion.gsub(/<(\/?)div>/,'<\1p>').html_safe %>
