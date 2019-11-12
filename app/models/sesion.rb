@@ -1,6 +1,8 @@
 class Sesion < ApplicationRecord
   before_save :delete_banner, if: -> {banner_del == '1'}
 
+  attr_accessor :banner_del
+
   validates_presence_of :titulo
   has_attached_file :banner, styles: {},
       url: '/assets/banners_sesiones/:style/:id/:basename.:extension',
