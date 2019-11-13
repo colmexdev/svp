@@ -1,6 +1,8 @@
 class PrincipalController < ApplicationController
 
   def inicio
+    @sliders = Slider.order("RANDOM()")
+    @pubs = Publicacion.order(indice: :asc).limit(3)
   end
 
   def acerca

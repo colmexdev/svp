@@ -2,12 +2,15 @@
 <div uk-slider="autoplay: true; autoplay-interval: 5000; pause-on-hover:true" id="slider">
 	<div class="uk-slider-container uk-position-relative">
 		<ul class="uk-slider-items uk-child-width-1-1">
+			<% @sliders.each do |s| %>
 			<li>
-				<div class="uk-position-relative" style="background:url('<%= image_url('banner-carrusel.jpg') %>')  no-repeat center center/ 100% 100%">
+				<div class="uk-position-relative" style="background:url('<%= s.banner.url %>')  no-repeat center center/ 100% 100%">
+					<% if s.liga.present? %>
+						<a class="liga-slider uk-position-center" href="<%= s.liga %>" target="<%= s.liga.include?(request.base_url) ? '' : '_blank' %>"></a>
+					<% end %>
+				</div>
 			</li>
-			<li>
-				<div class="uk-position-relative" style="background:url('<%= image_url('banner-carrusel.jpg') %>')  no-repeat center center/ 100% 100%">
-			</li>
+			<% end %>
 		</ul>
 		<ul class="uk-position-bottom uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 	</div>

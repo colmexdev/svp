@@ -15,6 +15,8 @@ class PrincipalController < ApplicationController
   def seminarios
     @title = "Seminarios"
     @sems = Sesion.where("date_part('year', fecha_i) = ?", (params[:anio] ? params[:anio] : Sesion.maximum(:fecha_i).year.to_s)).order(fecha_i: :desc)
+    @nxt = Sesion.where("date_part('year', fecha_i) = ?", (params[:anio] ? params[:anio].to_i + 1 : (Sesion.maximum(:fecha_i).year + 1).to_s)).size
+    @lst = Sesion.where("date_part('year', fecha_i) = ?", (params[:anio] ? params[:anio].to_i - 1 : (Sesion.maximum(:fecha_i).year - 1).to_s)).size
     respond_to do |format|
       format.html
       format.js

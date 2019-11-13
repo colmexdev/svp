@@ -2,12 +2,15 @@
 <div uk-slider="autoplay: true; autoplay-interval: 5000; pause-on-hover:true" id="slider">
 	<div class="uk-slider-container uk-position-relative">
 		<ul class="uk-slider-items uk-child-width-1-1">
+			<% @sliders.each do |s| %>
 			<li>
-				<div class="uk-position-relative" style="background:url('<%= image_url('banner-carrusel.jpg') %>')  no-repeat center center/ 100% 100%">
+				<div class="uk-position-relative" style="background:url('<%= s.banner.url %>')  no-repeat center center/ 100% 100%">
+					<% if s.liga.present? %>
+						<a class="liga-slider" href="<%= s.liga %>" target="<%= s.liga.include?(request.base_url) ? '' : '_blank' %>"></a>
+					<% end %>
+				</div>
 			</li>
-			<li>
-				<div class="uk-position-relative" style="background:url('<%= image_url('banner-carrusel.jpg') %>')  no-repeat center center/ 100% 100%">
-			</li>
+			<% end %>
 		</ul>
 		<ul class="uk-position-bottom uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 	</div>
@@ -34,18 +37,5 @@ en 2014 para generar conocimiento aplicado sobre la naturaleza de un fenómeno c
 			<img class="portada" data-src="<%= image_url('portada3.png') %>" data-width data-height uk-img>
 		</div>
 	</div>
-	<script>
-/*		window.addEventListener("load", function(){
-			var portadas = document.querySelectorAll(".portada");
-			var maximo = 0;
-			for(var i = 0; i < portadas.length; i++){
-				maximo = Math.max(maximo, parseFloat(window.getComputedStyle(portadas[i])["height"].slice(0,-2)));
-			}
-			var frames = document.querySelectorAll(".portadas-pubs > div > div");
-			for(var i = 0; i < frames.length; i++){
-				frames[i].style.height = Math.ceil(maximo) + "px";
-			}
-		}); */
-	</script>
 </div>
 <%= render 'principal/footer' %>
