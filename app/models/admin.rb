@@ -1,9 +1,9 @@
 class Admin < ApplicationRecord
-  devise :ldap_authenticatable, :rememberable
+  devise :ldap_authenticatable#, :rememberable
 
-  def remember_me!
-    true
-  end
+  #def remember_me!
+  #  true
+  #end
 
   def email_required?
     false
