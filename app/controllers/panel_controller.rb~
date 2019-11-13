@@ -174,11 +174,12 @@ class PanelController < ApplicationController
       # Modelo para estudiantes del histórico.
       }, "Publicaciones": {
         model: Publicacion,
-        fields: {titulo: "Título", autor: "Autor(es)", edicion: "Edición", descripcion: "Descripción", liga_vid: "Liga(s) a video", indice: "Índice"},
+        fields: {titulo: "Título", fecha: "Fecha de publicación", autor: "Autor(es)", edicion: "Edición", descripcion: "Descripción", liga_vid: "Liga(s) a video", indice: "Índice"},
         imgs: {portada: "Portada"},
         textarea: [:autor, :edicion, :liga_vid],
         numbers: [:indice],
         trix: [:descripcion],
+        dates: [:fecha],
         p_text: [:titulo]
       }, "Sesiones": {
         model: Sesion,

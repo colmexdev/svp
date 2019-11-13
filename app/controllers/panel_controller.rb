@@ -190,14 +190,14 @@ class PanelController < ApplicationController
         trix: [:descripcion],
         textarea: [:liga_vid],
         check: {pubs: Publicacion.all.map{|x| [x.titulo, x.titulo]}}
-      }#, "Sliders": {
-      #  model: Slider,
-      #  fields: {liga: "Liga", posicion: "Posición del badge", fecha_i: "Fecha de publicación", fecha_f: "Fecha de expiración"},
-      #  imgs: {banner: "Imagen de fondo", badge: "Badge"},
+      }, "Sliders": {
+        model: Slider,
+        fields: {liga: "Liga"},
+        imgs: {banner: "Imagen de fondo"},
       #  dates: [:fecha_i, :fecha_f],
-      #  p_text: [:liga],
+        p_text: [:liga]
       #  select: {posicion: [["Superior izquierda","top-left"],["Superior centrado","top-center"],["Superior derecha","top-right"],["Centrado izquierda","center-left"],["Centrado","center"],["Centrado derecha","center-right"],["Inferior izquierda","bottom-left"],["Inferior centrado","bottom-center"],["Inferior derecha","bottom-right"]]}
-      #}
+      }
     }
   end
   # Función que regresa, como variables globales, los campos de los modelos seleccionados.
