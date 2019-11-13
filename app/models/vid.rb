@@ -12,6 +12,7 @@ class Vid < ApplicationRecord
   end
 
   def shift_indice
+    logger.debug self
     Vid.where("indice > :indice", indice: self.indice).order(indice: :asc) do |v|
       v.update(indice: v.indice - 1)
     end
