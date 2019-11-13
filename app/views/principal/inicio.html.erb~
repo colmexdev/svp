@@ -6,7 +6,9 @@
 			<li>
 				<div class="uk-position-relative" style="background:url('<%= s.banner.url %>')  no-repeat center center/ 100% 100%">
 					<% if s.liga.present? %>
-						<a class="liga-slider uk-position-center" href="<%= s.liga %>" target="<%= s.liga.include?(request.base_url) ? '' : '_blank' %>"></a>
+						<a class="liga-slider uk-position-center" href="<%= s.liga %>" target="<%= s.liga.include?(request.base_url) || s.liga[0] == '/' ? '' : '_blank' %>"></a>
+					<% else %>
+						<a class="liga-slider uk-position-center" href="" target=""></a>
 					<% end %>
 				</div>
 			</li>
