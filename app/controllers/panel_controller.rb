@@ -197,6 +197,11 @@ class PanelController < ApplicationController
       #  dates: [:fecha_i, :fecha_f],
         p_text: [:liga]
       #  select: {posicion: [["Superior izquierda","top-left"],["Superior centrado","top-center"],["Superior derecha","top-right"],["Centrado izquierda","center-left"],["Centrado","center"],["Centrado derecha","center-right"],["Inferior izquierda","bottom-left"],["Inferior centrado","bottom-center"],["Inferior derecha","bottom-right"]]}
+      }, "Videos": {
+        model: Vid,
+        fields: {liga: "Liga del video", indice: "Índice"},
+        p_text: [:liga],
+        numbers: [:indice]
       }
     }
   end
