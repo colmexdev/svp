@@ -33,7 +33,13 @@ class PrincipalController < ApplicationController
 
   def publicaciones
     @title = "Publicaciones"
-    @publicaciones = Publicacion.order(indice: :asc)
+    @publicaciones = Publicacion.order(indice: :asc).limit(6).offset(params[:offset] ? params[:offset].to_i * 6 : 0)
+    @total = Publicacion.count
+    @pags = (@total / 6.0).ceil
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def publicacion

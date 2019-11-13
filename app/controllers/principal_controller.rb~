@@ -1,6 +1,8 @@
 class PrincipalController < ApplicationController
 
   def inicio
+    @sliders = Slider.order("RANDOM()")
+    @pubs = Publicacion.order(indice: :asc).limit(3)
   end
 
   def acerca
@@ -31,7 +33,9 @@ class PrincipalController < ApplicationController
 
   def publicaciones
     @title = "Publicaciones"
-    @publicaciones = Publicacion.order(indice: :asc)
+    @publicaciones = Publicacion.order(indice: :asc).limit(6).offset(params[:offset] ? params[:offset].to_i * 6 : 0)
+    @total = Publicacion.count
+    @pags = (@total / 6.0).ceil
   end
 
   def publicacion
