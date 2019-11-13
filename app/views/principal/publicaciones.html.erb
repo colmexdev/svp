@@ -6,7 +6,7 @@
 	<div class="uk-child-width-1-3@m uk-grid-collapse" uk-grid>
 		<% @publicaciones.each do |p| %>
 		<div class="publicacion uk-text-center">
-			<a href="#">
+			<a href="<%= publicacion_path(pub: p.titulo.parameterize) %>">
 				<img data-src="<%= p.portada.url(:thumb_cut) %>" data-width data-height uk-img>
 			</a>
 			<a href="<%= publicacion_path(pub: p.titulo.parameterize) %>" class="boton-seminario">Más información</a>
