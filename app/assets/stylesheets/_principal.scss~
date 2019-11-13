@@ -4,7 +4,7 @@ body { height: 100%; }
 
 svg path { all: inherit; }
 
-#slider { max-height: 1100px; max-width: 2000px;
+#slider { max-height: 550px; max-width: 1000px; margin: 0 auto;
 	.uk-slider-container { height: 100%;
 		.uk-slider-items { height: 100%;
 			> li > .uk-position-relative { height: 100%; width: 100%; }
