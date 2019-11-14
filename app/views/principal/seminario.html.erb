@@ -53,6 +53,18 @@
 		<% end %>
 	</div>
 	<% end %>
+	<% if @imgs.size > 0 %>
+	<div class="seccion-pub">
+		<span class="titulo">Galería de <span class="outline blanco">imágenes</span></span><br>
+		<% @imgs.each do |img| %>
+			<div class="uk-grid-collapse grid-pub-sem" uk-grid>
+				<div class="portada-pub uk-text-center uk-width-1-1">
+					<img data-src="<%= img.imagen.url(:thumb) %>" data-width data-height uk-img>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<% end %>
 </div>
 <script>
 	document.addEventListener("DOMContentLoaded", function(){

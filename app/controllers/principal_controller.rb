@@ -28,6 +28,7 @@ class PrincipalController < ApplicationController
   def seminario
     @sem = Sesion.where("regexp_replace(regexp_replace(regexp_replace(lower(unaccent(titulo)),'[^a-z0-9_]+','-','g'),'(.*)(-{1,})$','\\1'),'^(-{1,})?(.*)','\\2') = :sem", sem: params[:sem]).first
     @pubs = Publicacion.where(titulo: (JSON.parse(@sem.pubs).reject{|x| x.empty?}.size > 0 ? JSON.parse(@sem.pubs).reject{|x| x.empty?} : ",")).all
+    @imgs = Imagen.where(sesion: @sem.titulo).order(indice: :asc)
     @title = @sem.titulo
   end
 
