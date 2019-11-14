@@ -7,7 +7,7 @@ class Imagen < ApplicationRecord
 
   validates_presence_of :indice
   validates_presence_of :sesion
-  has_attached_file :imagen, styles: {thumb: "300x300!"},
+  has_attached_file :imagen, styles: {thumb: "1000x550>", thumb_cut: "1000x550#", thumb_alt: "1000x550!"},
       url: '/assets/imgs_galeria/:style/:id/:basename.:extension',
       path: ':rails_root/public/assets/imgs_galeria/:style/:id/:basename.:extension'
   validates_attachment_content_type :imagen, content_type: ["image/jpg", "image/jpeg", "image/png"]
