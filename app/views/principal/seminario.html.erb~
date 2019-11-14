@@ -74,7 +74,7 @@
 			if(xhr.status === 200){
 				var data = JSON.parse(xhr.response);
 				if(data["videos"].length > 0){
-					document.querySelector("#img-agenda").setAttribute("src", data["videos"][0]["ligaImagen"]);
+					document.querySelector("#img-agenda").setAttribute("src", data["videos"][0]["ligaImagen"].replace("http","https"));
 				}
 			}
 		}
