@@ -61,7 +61,7 @@
 				<ul class="uk-slider-items uk-grid-collapse uk-child-width-1-1" uk-grid>
 					<% @imgs.each do |img| %>
 					<li>
-						<img data-src="<%= img.imagen.url(:thumb) %>" data-width data-height uk-img alt="<%= img.caption %>">
+						<img data-src="<%= img.imagen.url(:thumb_cut) %>" data-width data-height uk-img alt="<%= img.caption %>">
 					</li>
 					<% end %>
 				</ul>
