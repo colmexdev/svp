@@ -202,6 +202,13 @@ class PanelController < ApplicationController
         fields: {liga: "Liga del video", indice: "Índice"},
         p_text: [:liga],
         numbers: [:indice]
+      }, "Imágenes de sesiones": {
+        model: Imagen,
+        fields: {caption: "Descripción", sesion: "Sesión", indice: "Índice"},
+        imgs: {imagen: "Imagen"},
+        numbers: [:indice],
+        select: {sesion: Sesion.all.map{|x| [x.titulo, x.titulo]}},
+        p_text: [:caption]
       }
     }
   end

@@ -52,8 +52,6 @@ class PrincipalController < ApplicationController
     @limite = 6
     @videos = Vid.limit(@limite).offset(params[:offset] ? params[:offset].to_i * @limite : 0).order(indice: :asc)
     @total = Vid.count
-    #@videos = Video.where(lista: "Seminario sobre Violencia y Paz").limit(@limite).offset(params[:offset] ? params[:offset].to_i * @limite : 0).order(fecha: :desc)
-    #@total = Video.where(lista: "Seminario sobre Violencia y Paz").size
     respond_to do |format|
       format.html
       format.js
