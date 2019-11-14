@@ -56,7 +56,7 @@
 	<% if @imgs.size > 0 %>
 	<div class="seccion-pub">
 		<span class="titulo">Galería de <span class="outline blanco">imágenes</span></span><br>
-		<div uk-slider>
+		<div uk-slider="center: true">
 			<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 				<ul class="uk-slider-items uk-child-width-1-1">
 					<% @imgs.each do |img| %>
