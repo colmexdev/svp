@@ -14,7 +14,7 @@ for(var i = 0; i < sems.length; i++){
 			var data = JSON.parse(xhr.response);
 			console.log(data["videos"]);
 			if(data["videos"].length > 0){
-				document.querySelector("#img-sem-" + i).setAttribute("data-src",data["videos"][0]["ligaImagen"].replace("http","https");
+				document.querySelector("#img-sem-" + i).setAttribute("data-src",data["videos"][0]["ligaImagen"].replace("http","https"));
 			}
 		}
 	};
