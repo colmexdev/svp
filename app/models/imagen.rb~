@@ -20,14 +20,14 @@ class Imagen < ApplicationRecord
   end
 
   def update_indice
-    q = Imagen.where(indice: self.indice).first
+    q = Imagen.where(indice: self.indice, sesion: self.sesion).first
     if !q.nil?
       q.update(indice: q.indice + 1)
     end
   end
 
   def shift_indice
-    Imagen.where("indice > :ind", ind: self.indice).order(indice: :asc).each do |i|
+    Imagen.where("indice > :ind and sesion = :ses", ind: self.indice, ses: self.sesion).order(indice: :asc).each do |i|
       i.update(indice: i.indice - 1)
     end
 end

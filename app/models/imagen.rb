@@ -30,4 +30,5 @@ class Imagen < ApplicationRecord
     Imagen.where("indice > :ind and sesion = :ses", ind: self.indice, ses: self.sesion).order(indice: :asc).each do |i|
       i.update(indice: i.indice - 1)
     end
+  end
 end
