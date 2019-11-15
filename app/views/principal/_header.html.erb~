@@ -23,7 +23,16 @@
 						</ul>
 					</div>
 				</li>
-				<li><a class="<%= action_name == 'seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a></li>
+				<li>
+					<a class="<%= action_name == 'seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a>
+					<div class="uk-navbar-dropdown">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<% @anios.each do |a| %>
+							<li><a class="<%= action_name == 'seminarios' && params[:anio].to_i == a.to_i  ? "active" : "" %>" href="<%= seminarios_path(anio: a.to_i) %>"><%= a.to_i %></a></li>
+							<% end %>
+						</ul>
+					</div>
+				</li>
 				<li><a class="<%= action_name == 'publicaciones' ? "active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 				<li><a class="<%= action_name == 'multimedia' ? "active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
 				<li><a href="#">Cursos</a></li>
@@ -44,7 +53,16 @@
 						</ul>
 					</div>
 				</li>
-				<li><a class="<%= action_name == 'seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a></li>
+				<li>
+					<a class="<%= action_name == 'seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a>
+					<div class="uk-navbar-dropdown">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<% @anios.each do |a| %>
+							<li><a class="<%= action_name == 'seminarios' && params[:anio].to_i == a.to_i  ? "active" : "" %>" href="<%= seminarios_path(anio: a.to_i) %>"><%= a.to_i %></a></li>
+							<% end %>
+						</ul>
+					</div>
+				</li>
 				<li><a class="<%= action_name == 'publicaciones' ? "active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 				<li><a class="<%= action_name == 'multimedia' ? "active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
 				<li><a href="#">Cursos</a></li>
