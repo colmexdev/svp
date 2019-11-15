@@ -81,3 +81,9 @@ a:hover { text-decoration: none;
 	.uk-navbar-left, .uk-navbar-right { display: flex !important; }
 	#header nav { display: flex !important; padding-bottom: 0; }
 }
+
+#menu-lateral .offcanvas-bar { background-color: #FFFFFF;
+	>ul >li >a { background-color: #FFFFFF; font-size: 18px; font-family: "Roboto"; font-weight: 600; color: #303635; padding: 7px 0; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear;transtion: all 0.3s linear;
+		&:hover, &.active { color: #FFFFFF; background-color: #F16F70; }
+	}
+}
