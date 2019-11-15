@@ -76,7 +76,7 @@
 		<ul class="uk-nav uk-nav-default">
 			<li class="<%= action_name == 'acerca' ? "uk-active" : "" %>"><a href="<%= acerca_path %>">Acerca de</a></li>
 			<li class="<%= action_name == 'colaboradores' ? "uk-active" : "" %>"><a href="<%= colaboradores_path %>">Colaboradores</a></li>
-			<li class="<%= action_name == 'seminarios' ? "uk-active" : "" %>">
+			<li class="uk-parent <%= action_name == 'seminarios' ? "uk-active" : "" %>">
 				<a href="<%= seminarios_path %>">Seminarios</a>
 				<ul class="uk-nav-sub">
 					<% @anios.each do |a| %>
