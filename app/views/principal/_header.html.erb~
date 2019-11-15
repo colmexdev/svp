@@ -87,15 +87,15 @@
 			<li class="<%= action_name == 'publicaciones' ? "uk-active" : "" %>"><a href="<%= publicaciones_path %>">Publicaciones</a></li>
 			<li class="<%= action_name == 'multimedia' ? "uk-active" : "" %>"><a href="<%= multimedia_path %>">Multimedia</a></li>
 			<li>
-				<div class="uk-grid-collapse" uk-grid>
+				<div class="uk-grid-collapse uk-flex-center" style="margin: 15px auto; uk-grid>
 					<div>
 						<a href="https://twitter.com/SViolenciayPaz" target="_blank">
-							<svg viewBox="0 0 34 34" class="net-img"><use class="net" xlink:href="#tw"></use></svg>
+							<svg viewBox="0 0 34 34" class="net-img"><use style="fill: #A6A6A6 !important;" class="net" xlink:href="#tw"></use></svg>
 						</a>
 					</div>
 					<div>
 						<a href="https://www.facebook.com/Seminario.Violencia/" target="_blank">
-							<svg viewBox="0 0 34 34" class="net-img"><use class="net" xlink:href="#fb"></use></svg>
+							<svg viewBox="0 0 34 34" class="net-img"><use style="fill: #A6A6A6 !important;" class="net" xlink:href="#fb"></use></svg>
 						</a>
 					</div>
 				</div>
