@@ -73,7 +73,7 @@
 </div>
 <div id="menu-lateral" uk-offcanvas="overlay: true; flip: true">
 	<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
-		<ul class="uk-nav uk-nav-default">
+		<ul class="uk-nav-default" uk-nav>
 			<li class="<%= action_name == 'acerca' ? "uk-active" : "" %>"><a href="<%= acerca_path %>">Acerca de</a></li>
 			<li class="<%= action_name == 'colaboradores' ? "uk-active" : "" %>"><a href="<%= colaboradores_path %>">Colaboradores</a></li>
 			<li class="uk-parent <%= action_name == 'seminarios' ? "uk-active" : "" %>">
