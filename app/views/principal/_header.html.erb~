@@ -74,18 +74,18 @@
 <div id="menu-lateral" uk-offcanvas="overlay: true; flip: true">
 	<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
 		<ul class="uk-nav-default" uk-nav>
-			<li class="<%= action_name == 'acerca' ? "uk-active" : "" %>"><a href="<%= acerca_path %>">Acerca de</a></li>
-			<li class="<%= action_name == 'colaboradores' ? "uk-active" : "" %>"><a href="<%= colaboradores_path %>">Colaboradores</a></li>
-			<li class="uk-parent <%= action_name == 'seminarios' ? "uk-active" : "" %>">
-				<a href="#">Seminarios</a>
+			<li><a href="<%= acerca_path %>" class="<%= action_name == 'acerca' ? "uk-active" : "" %>">Acerca de</a></li>
+			<li><a href="<%= colaboradores_path %>" class="<%= action_name == 'colaboradores' ? "uk-active" : "" %>">Colaboradores</a></li>
+			<li>
+				<a href="#" class="uk-parent <%= action_name == 'seminarios' ? "uk-active" : "" %>">Seminarios</a>
 				<ul class="uk-nav-sub">
 					<% @anios.each do |a| %>
-					<li><a class="<%= action_name == 'seminarios' && params[:anio].to_i == a.to_i  ? "active" : "" %>" href="<%= seminarios_path(anio: a.to_i) %>"><%= a.to_i %></a></li>
+					<li><a class="<%= action_name == 'seminarios' && params[:anio].to_i == a.to_i  ? "uk-active" : "" %>" href="<%= seminarios_path(anio: a.to_i) %>"><%= a.to_i %></a></li>
 					<% end %>
 				</ul>
 			</li>
-			<li class="<%= action_name == 'publicaciones' ? "uk-active" : "" %>"><a href="<%= publicaciones_path %>">Publicaciones</a></li>
-			<li class="<%= action_name == 'multimedia' ? "uk-active" : "" %>"><a href="<%= multimedia_path %>">Multimedia</a></li>
+			<li><a class="<%= action_name == 'publicaciones' ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+			<li><a class="<%= action_name == 'multimedia' ? "uk-active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
 			<li>
 				<div class="uk-grid-collapse uk-flex-center" style="margin: 15px auto;" uk-grid>
 					<div>
