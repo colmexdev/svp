@@ -58,7 +58,7 @@
 		<span class="titulo">Galería de <span class="outline blanco">imágenes</span></span><br>
 		<div uk-slider="" style="max-width: 1000px; margin: 0 auto; margin-top: 25px; width: 95%">
 			<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-				<ul class="uk-slider-items uk-grid-collapse uk-child-width-1-1 uk-width-1-1" uk-grid>
+				<ul class="uk-slider-items uk-grid-collapse uk-child-width-1-1 uk-width-1-1" uk-grid style="width: 100% !important;">
 					<% @imgs.each do |img| %>
 					<li>
 						<img data-src="<%= img.imagen.url(:thumb_cut) %>" data-width data-height uk-img alt="<%= img.caption %>">
