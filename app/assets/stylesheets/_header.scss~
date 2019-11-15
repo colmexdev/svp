@@ -84,7 +84,7 @@ a:hover { text-decoration: none;
 
 #menu-lateral .uk-offcanvas-bar { background-color: #BCE2D3; padding: 0;
 	>ul >li {
-		>a { background-color: #FFFFFF; font-size: 22px; font-family: "Roboto"; font-weight: 600; color: #303635; padding: 0 15px; margin: 5px 0; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear;transtion: all 0.3s linear;
+		>a { background-color: #FFFFFF; font-size: 22px; font-family: "Roboto"; font-weight: 600; color: #303635; padding: 0 15px; margin: 7px 0; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear;transtion: all 0.3s linear;
 			&:hover, &.active { color: #FFFFFF; background-color: #F16F70; }
 		}
 		.uk-nav-sub { padding: 0;
