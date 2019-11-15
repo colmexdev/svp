@@ -85,7 +85,7 @@ a:hover { text-decoration: none;
 #menu-lateral .uk-offcanvas-bar { background-color: #BCE2D3; padding-left: 0; padding-right: 0;
 	>ul >li >a { background-color: #FFFFFF; font-size: 21px; font-family: "Roboto"; font-weight: 600; color: #303635; padding: 7px 0; margin: 0 5px; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear;transtion: all 0.3s linear;
 		&:hover, &.active { color: #FFFFFF; background-color: #F16F70; }
-		a { background-color: #BCE2D3; font-size: 19px; font-family: "Roboto"; font-weight: 600; color: #A6A6A6; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear;transtion: all 0.3s linear;
+		.uk-nav-sub a { background-color: #BCE2D3; font-size: 19px; font-family: "Roboto"; font-weight: 600; color: #A6A6A6; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear;transtion: all 0.3s linear;
 			&:hover, &.active { background-color: #FFFFFF; color: #303635; }
 		}
 	}
