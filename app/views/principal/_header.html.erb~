@@ -78,7 +78,7 @@
 			<li class="<%= action_name == 'colaboradores' ? "uk-active" : "" %>"><a href="<%= colaboradores_path %>">Colaboradores</a></li>
 			<li class="uk-parent <%= action_name == 'seminarios' ? "uk-active" : "" %>">
 				<a href="#">Seminarios</a>
-				<ul class="uk-nav-sub" uk-nav>
+				<ul class="uk-nav-sub">
 					<% @anios.each do |a| %>
 					<li><a class="<%= action_name == 'seminarios' && params[:anio].to_i == a.to_i  ? "active" : "" %>" href="<%= seminarios_path(anio: a.to_i) %>"><%= a.to_i %></a></li>
 					<% end %>
