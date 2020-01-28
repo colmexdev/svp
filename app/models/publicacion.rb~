@@ -19,7 +19,7 @@ class Publicacion < ApplicationRecord
       url: '/assets/docs_pubs/:style/:id/:basename.:extension',
       path: ':rails_root/public/assets/docs_pubs/:style/:id/:basename.:extension',
       default_url: '/portada.png',
-      convert_options: {all: "-background white -flatten +matte"}
+      convert_options: {all: "-background white -flatten +matte -encoding Unicode"}
   validates_attachment_content_type :portada, content_type: ["image/jpg", "image/jpeg", "image/png", "application/pdf"]
 
   protected
