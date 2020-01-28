@@ -207,7 +207,7 @@ class PanelController < ApplicationController
         fields: {caption: "Descripción", sesion: "Sesión", indice: "Índice"},
         imgs: {imagen: "Imagen"},
         numbers: [:indice],
-        select: {sesion: Sesion.all.map{|x| [x.titulo, x.titulo]}},
+        select: {sesion: Sesion.order(fecha_i: :desc).map{|x| [x.titulo, x.titulo]}},
         p_text: [:caption]
       }
     }
