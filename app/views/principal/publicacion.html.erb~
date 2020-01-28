@@ -11,6 +11,7 @@
 			<p class="uk-position-bottom ficha-pub">
 				<% if @pub.autor.present? %>
 				<span class="outline-negro blanco">Autoría:</span> <%= @pub.autor.gsub("\n","<br>").html_safe %><br>
+				<% end %>
 				<% if @pub.edicion.present? %>
 				<span class="outline-negro blanco">Edición:</span> <%= @pub.edicion.gsub("\n","<br>").html_safe %>
 				<% end %>
