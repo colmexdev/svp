@@ -24,7 +24,7 @@ module Devise
           # Conexión a Active Directory.
           ActiveDirectory::Base.setup(settings)
           # Se comprueba conexión exitosa y se valida que el usuario esté contemplado en los parámetros de acceso.
-          if ActiveDirectory::Base.connected? && Rails.application.credentials.usrs.include?(usuario)
+          if ActiveDirectory::Base.connected? && Rails.application.credentials.usrs.split(/ *, */).include?(usuario)
             # Se comprueba que el usuario esté registrado.
             user = Admin.where(usuario: usuario).first
             # Si no es así, se registra.

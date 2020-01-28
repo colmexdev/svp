@@ -13,7 +13,7 @@ module Devise
     class LdapAuthenticatable < Authenticatable
       # Se valida sólo si hay usuario y contraseña presentes entre los parámetros enviados al servidor.
       def valid?
-        usuario && password
+        usuario.present? && password.present?
       end
       # Función de autenticación.
       def authenticate!
