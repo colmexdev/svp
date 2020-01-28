@@ -1,7 +1,7 @@
 		<% @publicaciones.each do |p| %>
 		<div class="publicacion uk-text-center">
 			<a href="<%= publicacion_path(pub: p.titulo.parameterize) %>">
-				<img data-src="<%= p.portada.url(:thumb_cut) || p.documento.url(:thumbnail) %>" data-width data-height uk-img>
+				<img data-src="<%= p.portada.url(:thumb_cut) || p.documento.url(:thumb_cut) %>" data-width data-height uk-img>
 			</a>
 			<a href="<%= publicacion_path(pub: p.titulo.parameterize) %>" class="boton-seminario">Más información</a>
 		</div>
