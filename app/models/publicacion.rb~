@@ -15,7 +15,7 @@ class Publicacion < ApplicationRecord
       convert_options: {all: "-background white -flatten +matte"}
   validates_attachment_content_type :portada, content_type: ["image/jpg", "image/jpeg", "image/png"]
 
-  has_attached_file :documento, styles: {thumbnail: "850x1167#", thumb_cut: "850x1167!"},
+  has_attached_file :documento, styles: {thumbnail: ["850x1167#", :jpg], thumb_cut: ["850x1167!", :jpg]},
       url: '/assets/docs_pubs/:style/:id/:basename.:extension',
       path: ':rails_root/public/assets/docs_pubs/:style/:id/:basename.:extension',
       default_url: '/portada.png',
