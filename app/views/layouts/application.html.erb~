@@ -10,6 +10,13 @@
 		<%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type => "image/x-icon" %>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap&subset=latin-ext" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=latin-ext" rel="stylesheet">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+		<meta http-equiv="x-ua-compatible" content="IE=edge" >
+		<meta name="robots" content="index, follow" >
+		<meta name="keywords" content="Violencia, paz, seminario, COLMEX, Sergio Aguayo" >
+		<meta name="description" content="Seminario sobre VIolencia y Paz de El Colegio de México." >
+		<!-- Obliga al sitio a no hacer zoom y respetar las medidas del dispositivo -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
 
   <body>
