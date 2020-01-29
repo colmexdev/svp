@@ -14,7 +14,7 @@ svg path { all: inherit; }
 	}	
 	.uk-slider-nav {
 		li { padding: 0 4px; }
-		li > a { background-color: #CCDEDC; border-color: #CCDEDC; width: 20px; height: 20px; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear; transition: all 0.3s linear;
+		li > a { background-color: #CCDEDC; border-color: #CCDEDC; width: 13px; height: 13px; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -ms-transition: all 0.3s linear; -o-transition: all 0.3s linear; transition: all 0.3s linear;
 			&:hover { background-color: #F16F70; border-color: #F16F70; }
 		}
 		li.uk-active > a { background-color: #F16F70; border-color: #F16F70; }
