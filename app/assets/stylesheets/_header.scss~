@@ -76,7 +76,7 @@ a:hover { text-decoration: none;
 @media only screen and (max-width: 1391px){
 	.uk-text-center.fixed {display: none !important; }
 	#menu-header { display: none; }
-	#modal-menu { display: flex; }
+	#modal-menu { display: flex; width: 40px; }
 	.logo-holder.fixed {display: none !important; }
 	.uk-navbar-left, .uk-navbar-right { display: flex !important; }
 	#header nav { display: flex !important; padding-bottom: 0; }
