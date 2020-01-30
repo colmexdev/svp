@@ -89,13 +89,13 @@
 			<li>
 				<div class="uk-grid-collapse uk-flex-center" style="margin: 15px auto;" uk-grid>
 					<div>
-						<a href="https://twitter.com/SViolenciayPaz" target="_blank">
-							<svg viewBox="0 0 34 34" class="net-img"><use class="net-ofc" xlink:href="#tw"></use></svg>
+						<a class="net-ofc" href="https://twitter.com/SViolenciayPaz" target="_blank">
+							<svg viewBox="0 0 34 34" class="net-img"><use xlink:href="#tw"></use></svg>
 						</a>
 					</div>
 					<div>
-						<a href="https://www.facebook.com/Seminario.Violencia/" target="_blank">
-							<svg viewBox="0 0 34 34" class="net-img"><use class="net-ofc" xlink:href="#fb"></use></svg>
+						<a class="net-ofc" href="https://www.facebook.com/Seminario.Violencia/" target="_blank">
+							<svg viewBox="0 0 34 34" class="net-img"><use xlink:href="#fb"></use></svg>
 						</a>
 					</div>
 				</div>
