@@ -41,7 +41,7 @@
 			<div class="uk-grid-collapse grid-pub-sem uk-flex-center" uk-grid>
 			<% end %>
 				<div class="publicacion portada-pub uk-text-center uk-flex uk-flex-center uk-flex-wrap uk-flex-wrap-middle uk-width-1-2@m">
-					<a href="<%= p.documento.url(:original) %>" target="_blank">
+					<a style="width: 100%;" href="<%= p.documento.url(:original) %>" target="_blank">
 						<img data-src="<%= p.portada.present? ? p.portada.url(:thumb_cut) : p.documento.url(:thumb_cut) %>" data-width data-height uk-img>
 					</a>
 					<a href="<%= p.documento.url(:original) %>" target="_blank" class="boton-seminario">Más información</a>
