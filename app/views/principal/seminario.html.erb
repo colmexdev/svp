@@ -40,7 +40,7 @@
 			<% if i % 2 == 0 %>
 			<div class="uk-grid-collapse grid-pub-sem uk-flex-center" uk-grid>
 			<% end %>
-				<div class="portada-pub uk-text-center uk-width-1-2@m">
+				<div class="publicacion portada-pub uk-text-center uk-flex uk-flex-center uk-flex-wrap uk-flex-wrap-middle uk-width-1-2@m">
 					<a href="<%= p.documento.url(:original) %>" target="_blank">
 						<img data-src="<%= p.portada.present? ? p.portada.url(:thumb_cut) : p.documento.url(:thumb_cut) %>" data-width data-height uk-img>
 					</a>
