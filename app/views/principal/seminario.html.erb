@@ -38,7 +38,7 @@
 		<span class="titulo">Documento <span class="outline blanco">relacionado</span></span><br>
 		<% @pubs.all.each_with_index do |pub,i| %>
 			<% if i % 2 == 0 %>
-			<div class="uk-grid-collapse grid-pub-sem" uk-grid>
+			<div class="uk-grid-collapse grid-pub-sem uk-flex-center" uk-grid>
 			<% end %>
 				<div class="portada-pub uk-text-center uk-width-1-2@m">
 					<a href="<%= pub.documento.url(:original) %>" target="_blank">
