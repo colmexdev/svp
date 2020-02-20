@@ -51,8 +51,10 @@ class PrincipalController < ApplicationController
   def multimedia
     @title = "Multimedia"
     @limite = 6
-    @videos = Vid.limit(@limite).offset(params[:offset] ? params[:offset].to_i * @limite : 0).order(indice: :asc)
-    @total = Vid.count
+    @videos = Video.where("tags like :tag", tag: "%SVP%").limit(@limite).offset(params[:offset] ? params[:offset].to_i * @limite : 0).order(fecha: :desc)
+    @total = Video.where("tags like :tag", tag: "%SVP%").count
+    #@videos = Vid.limit(@limite).offset(params[:offset] ? params[:offset].to_i * @limite : 0).order(indice: :asc)
+    #@total = Vid.count
     respond_to do |format|
       format.html
       format.js
