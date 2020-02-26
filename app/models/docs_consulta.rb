@@ -21,14 +21,14 @@ class DocsConsulta < ApplicationRecord
   end
 
   def update_indice
-    q = Documento.where(indice: self.indice).first
+    q = DocsConsulta.where(indice: self.indice).first
     if !q.nil?
       q.update(indice: q.indice + 1)
     end
   end
 
   def shift_indice
-    Documento.where("indice >= :ind", ind: self.indice).order(indice: :asc).each do |d|
+    DocsConsulta.where("indice >= :ind", ind: self.indice).order(indice: :asc).each do |d|
       d.update(indice: d.indice - 1)
     end
   end
