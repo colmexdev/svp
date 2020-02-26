@@ -3,6 +3,8 @@ class DocsConsulta < ApplicationRecord
   before_save :update_indice, if: :indice_changed?
   after_destroy :shift_indice
 
+  attr_accessor :documento_del
+
   validates_presence_of :titulo
   validates_presence_of :indice
   has_attached_file :documento, styles: {},
