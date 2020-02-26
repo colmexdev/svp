@@ -43,7 +43,9 @@
 						</ul>
 					</div>
 				</li>
+				<% if false %>
 				<li><a href="#">Cursos</a></li>
+				<% end %>
 			</ul>
 		</div>
 		<div class="uk-navbar-left uk-text-center logo-holder sticky">
@@ -73,6 +75,14 @@
 				</li>
 				<li><a class="<%= action_name == 'publicaciones' ? "active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 				<li><a class="<%= action_name == 'multimedia' ? "active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
+				<li>
+					<a class="<%= action_name == 'archivo' ? 'active' : '' %>" href="#">Documentos de Consulta</a>
+					<div class="uk-navbar-dropdown">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a class="<%= action_name == 'archivo'  ? 'active' : '' %>" href="<%= archivo_path %>">Archivo General de la Nación/Catálogo DFS</a></li>
+						</ul>
+					</div>
+				</li>
 				<li><a href="#">Cursos</a></li>
 			</ul>
 			<a id="modal-menu" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle href="#menu-lateral"></a>
@@ -94,6 +104,12 @@
 			</li>
 			<li><a class="<%= action_name == 'publicaciones' ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 			<li><a class="<%= action_name == 'multimedia' ? "uk-active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
+			<li class="uk-parent <%= action_name == 'archivo' ? 'uk-open' : '' %>">
+				<a href="#" class="<%= action_name == 'archivo' ? "uk-active" : "" %>">Documentos de Consulta</a>
+				<ul class="uk-nav-sub">
+					<li><a class="<%= action_name == 'archivo'  ? "uk-active" : "" %>" href="<%= archivo_path %>">Archivo General de la Nación/Catálogo DFS</a></li>
+				</ul>
+			</li>
 			<li>
 				<div class="uk-grid-collapse uk-flex-center" style="margin: 15px auto;" uk-grid>
 					<div>
