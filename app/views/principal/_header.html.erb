@@ -16,15 +16,15 @@
 		<div class="uk-width-1-1 uk-text-center fixed" style="margin-top: 10px;">
 			<ul class="uk-inline-block uk-navbar-nav" id="menu-header">
 				<li>
-					<a class="<%= action_name == 'acerca' ? "active" : "" %>" href="<%= acerca_path %>">Acerca de</a>
+					<a class="<%= action_name == 'acerca' ? 'active' : '' %>" href="<%= acerca_path %>">Acerca de</a>
 					<div class="uk-navbar-dropdown">
 						<ul class="uk-nav uk-navbar-dropdown-nav">
-							<li><a class="<%= action_name == 'colaboradores' ? "active" : "" %>" href="<%= colaboradores_path %>">Colaboradores</a></li>
+							<li><a class="<%= action_name == 'colaboradores' ? 'active' : '' %>" href="<%= colaboradores_path %>">Colaboradores</a></li>
 						</ul>
 					</div>
 				</li>
 				<li>
-					<a class="<%= action_name == 'seminarios' ? "active" : "" %>" href="<%= seminarios_path %>">Seminarios</a>
+					<a class="<%= action_name == 'seminarios' ? 'active' : '' %>" href="<%= seminarios_path %>">Seminarios</a>
 					<div class="uk-navbar-dropdown">
 						<ul class="uk-nav uk-navbar-dropdown-nav">
 							<% @anios.each do |a| %>
@@ -33,8 +33,16 @@
 						</ul>
 					</div>
 				</li>
-				<li><a class="<%= action_name == 'publicaciones' ? "active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
-				<li><a class="<%= action_name == 'multimedia' ? "active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
+				<li><a class="<%= action_name == 'publicaciones' ? 'active' : '' %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+				<li><a class="<%= action_name == 'multimedia' ? 'active' : '' %>" href="<%= multimedia_path %>">Multimedia</a></li>
+				<li>
+					<a class="<%= action_name == 'archivo' ? 'active' : '' %>" href="#">Documentos de Consulta</a>
+					<div class="uk-navbar-dropdown">
+						<ul class="uk-nav uk-navbar-dropdown-nav">
+							<li><a class="<%= action_name == 'archivo'  ? 'active' : '' %>" href="<%= archivo_path %>">Archivo General de la Nación/Catálogo DFS</a></li>
+						</ul>
+					</div>
+				</li>
 				<li><a href="#">Cursos</a></li>
 			</ul>
 		</div>

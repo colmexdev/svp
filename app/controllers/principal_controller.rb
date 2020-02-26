@@ -60,4 +60,8 @@ class PrincipalController < ApplicationController
       format.js
     end
   end
+
+  def archivo
+    @title = "Archivo General de la Nación/Catálogo DFS"
+  end
 end
