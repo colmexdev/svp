@@ -4,6 +4,12 @@
 </div>
 <div class="contenido">
 	<p>El Archivo General de la Nación (AGN) acaba de liberar la consulta directa a los expedientes de la Dirección Federal de Seguridad (DFS), la temible policía política del régimen priísta (1947-1985). Aseguran que no existe instrumento de consulta y que están elaborando un catálogo de acuerdo a los estándares internacionales. Cuando Aurora Gómez Galvarriato (colega del Colmex) fue directora del AGN elaboró uno. Previa autorización de su parte, lo compartimos para contribuir a democratizar la información y mejorar el entendimiento de la historia reciente.</p>
+
+	<ul>
+	<% @archivos.each do |a| %>
+		<li><a class="uk-link" href="<%= a.documento.url %>"><%= a.titulo %></a></li>
+	<% end %>
+	</ul>
 </div>
 
 <%= render 'principal/footer' %>
