@@ -210,7 +210,7 @@ class PanelController < ApplicationController
         select: {sesion: Sesion.order(fecha_i: :desc).map{|x| [x.titulo, x.titulo]}},
         p_text: [:caption]
       }, "Archivos Catálogo DFS": {
-        model: Documento,
+        model: DocsConsulta,
         fields: {titulo: "Título", indice: "Índice"},
         imgs: {documento: "Documento"},
         p_text: [:titulo],
