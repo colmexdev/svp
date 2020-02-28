@@ -7,7 +7,7 @@
 
 	<ul style="list-style-type: none;">
 	<% @archivos.each do |a| %>
-		<li><a class="uk-link dfs-link" href="<%= a.documento.url %>"><%= a.titulo %></a></li>
+		<li><a class="uk-link dfs-link" href="<%= a.documento.url %>" target="_blank"><%= a.titulo %></a></li>
 	<% end %>
 	</ul>
 </div>
