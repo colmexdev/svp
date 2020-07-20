@@ -13,18 +13,18 @@ module Devise
     class LdapAuthenticatable < Authenticatable
       # Se valida sólo si hay usuario y contraseña presentes entre los parámetros enviados al servidor.
       def valid?
-        usuario.present? && password.present?
+        params[:admin] && usuario.present? && password.present?
       end
       # Función de autenticación.
       def authenticate!
         # Se comprueba que existe el formulario con valores para "admin".
         if params[:admin]
           # Configuración de conexión a Active Directory.
-    		  settings = {host: ENV["AD_HOST"], base: 'DC=colmex,DC=mx', port: ENV["AD_PORT"].to_i, encryption: :simple_tls, auth: {method: :simple, username: "#{usuario}@colmex.mx", password: password} }
+    		  settings = {host: ENV["AD_HOST"], base: 'DC=colmex,DC=mx', port: ENV["AD_PORT"].to_i, encryption: :simple_tls, auth: {method: :simple, username: ENV["AD_USR"], password: ENV["AD_PWD"]} }
           # Conexión a Active Directory.
           ActiveDirectory::Base.setup(settings)
           # Se comprueba conexión exitosa y se valida que el usuario esté contemplado en los parámetros de acceso.
-          if ActiveDirectory::Base.connected? && Rails.application.credentials.usrs.split(/ *, */).include?(usuario)
+          if ActiveDirectory::Base.connected? && Rails.application.credentials.usrs.split(/ *, */).include?(usuario) && !ActiveDirectory::User.find(:first, mail: "#{usuario}@colmex.mx").nil?
             # Se comprueba que el usuario esté registrado.
             user = Admin.where(usuario: usuario).first
             # Si no es así, se registra.
