@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get '/publicacion/:pub' => 'principal#publicacion', :as => :publicacion
   get '/multimedia' => 'principal#multimedia', :as => :multimedia
   get '/catalogo-dfs' => 'principal#archivo', :as => :archivo
+  get '/mexican-violence-research-project' => 'principal#mvrp', :as => :mvrp
 
   root to: 'principal#inicio'
 end

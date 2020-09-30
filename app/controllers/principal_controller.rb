@@ -65,4 +65,7 @@ class PrincipalController < ApplicationController
     @title = "Archivo General de la Nación/Catálogo DFS"
     @archivos = DocsConsulta.order(indice: :asc)
   end
+
+  def mvrp
+  end
 end
