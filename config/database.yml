@@ -97,7 +97,7 @@ pub:
 
 production:
   <<: *default
-  host: "localhost"
+  host: "www.colmex.mx"
   database: <%= ENV["SVP_DB"] %>
   username: <%= ENV["SVP_USR"] %>
   password: <%= ENV['SVP_PWD'] %>
