@@ -68,4 +68,7 @@ class PrincipalController < ApplicationController
 
   def mvrp
   end
+
+  def special
+  end
 end

@@ -1,0 +1,57 @@
+<template id="docview">
+    <div class="container-fluid" style="margin-left: 0; margin-right: 0; display: inline-flex;">
+        <div class="row">
+            <div class="col-sm-12 back-button">
+                <button type="button" class="btn btn-search">
+                    <router-link to="/" style="color:black; font-style: normal; text-decoration: none;">{{$t('back')}}
+                    </router-link>
+                </button>
+            </div>
+            <!--<div class="col-sm-3 ">
+                    <img class="img-responsive" :src="this.$store.getters['principal/base_url'] + thumbnail">
+            </div>-->
+            <div class="pdf-viewer" v-if="related != undefined">
+                <input type="hidden" id="pdf_id" :value="this.$store.getters['principal/base_url'] + 'downloads/'+ related" />
+                <iframe onload="read_pdfid()" id="pdf_iframe" src="/js/vue/web/viewer.html#zoom=page-fit" width="50%" height="500px"></iframe>
+            </div>
+            <div class="pdf-viewer" v-if="related == undefined">
+                <img class="img-responsive" :src="get_url() + thumbnail">
+            </div>
+            <div class="col-sm-9 doc-data" :class="[this.pdf_active ? 'pdf-active': 'img-active']">
+                <div>
+                    <h3>{{doc.title[0]}}</h3>
+                </div>
+                <table class="table">
+                    <tbody>
+                        <tr v-for="(metadata, key, index) in doc" v-if="filter_key(metadata,key)">
+                            <th>
+                                {{ $t(key) }}
+                            </th>
+                            <td v-if="typeof metadata == 'object'">
+                                <p v-for="m in metadata">
+                                    {{ m }}
+                                </p>
+                            </td>
+                            <td v-else>
+                                <p>
+                                    {{ metadata }}
+                                </p>
+                            </td>
+                        </tr>
+                        <tr v-if="related != undefined">
+                            <th>
+                                {{ $t('download') }}
+                            </th>
+                            <td>
+                                <p>
+                                    <a
+                                        :href="this.$store.getters['principal/base_url'] + 'downloads/'+ related">{{ $t('down_label') }}</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</template>

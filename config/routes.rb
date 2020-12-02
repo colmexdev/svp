@@ -28,5 +28,7 @@ Rails.application.routes.draw do
   get '/catalogo-dfs' => 'principal#archivo', :as => :archivo
   get '/mexican-violence-research-project' => 'principal#mvrp', :as => :mvrp
 
+  get '/coleccion-de-recursos' => 'principal#special', :as => :recursos_bdcv
+
   root to: 'principal#inicio'
 end

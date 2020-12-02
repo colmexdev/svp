@@ -104,7 +104,12 @@
 					<% end %>
 				</ul>
 			</li>
-			<li><a class="<%= action_name == 'publicaciones' ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+			<li><a class="<%= ['publicaciones',special'].include?(action_name) ? "uk-active" : "" %>" href="#">Publicaciones</a>
+				<ul class="uk-nav-sub">
+					<li><a class="<%= action_name == 'publicaciones'  ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+					<li><a class="<%= action_name == 'special'  ? "uk-active" : "" %>" href="<%= recursos_bdcv_path %>">Colección de recursos</a></li>
+				</ul>
+			</li>
 			<li><a class="<%= action_name == 'multimedia' ? "uk-active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
 			<li class="uk-parent <%= action_name == 'archivo' ? 'uk-open' : '' %>">
 				<a href="#" class="<%= action_name == 'archivo' ? "uk-active" : "" %>">Documentos de Consulta</a>
