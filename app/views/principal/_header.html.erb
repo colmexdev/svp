@@ -37,7 +37,9 @@
 					<div class="uk-navbar-dropdown">
 						<ul class="uk-nav uk-navbar-dropdown-nav">
 							<li><a class="<%= action_name == 'publicaciones'  ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+<% if false %>
 							<li><a class="<%= action_name == 'special'  ? "uk-active" : "" %>" href="<%= recursos_bdcv_path %>">Colección de recursos</a></li>
+<% end %>
 						</ul>
 					</div>
 				</li>
@@ -84,7 +86,9 @@
 					<div class="uk-navbar-dropdown">
 						<ul class="uk-nav uk-navbar-dropdown-nav">
 							<li><a class="<%= action_name == 'publicaciones'  ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+<% if false %>
 							<li><a class="<%= action_name == 'special'  ? "uk-active" : "" %>" href="<%= recursos_bdcv_path %>">Colección de recursos</a></li>
+<% end %>
 						</ul>
 					</div>
 				</li>
@@ -121,7 +125,9 @@
 			<li><a class="<%= ['publicaciones','special'].include?(action_name) ? "uk-active" : "" %>" href="#">Publicaciones</a>
 				<ul class="uk-nav-sub">
 					<li><a class="<%= action_name == 'publicaciones'  ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+<% if false %>
 					<li><a class="<%= action_name == 'special'  ? "uk-active" : "" %>" href="<%= recursos_bdcv_path %>">Colección de recursos</a></li>
+<% end %>
 				</ul>
 			</li>
 			<li><a class="<%= action_name == 'multimedia' ? "uk-active" : "" %>" href="<%= multimedia_path %>">Multimedia</a></li>
