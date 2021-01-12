@@ -19,6 +19,9 @@ export default{
     "generic type": 'Tipos Genéricos',
     "resource type": 'Tipo de Documento',
     "place of publication": 'Lugar de Publicación',
+    editor : 'Editor',
+    compiler: 'Compilador',
+    "contained in" : 'Contenido en:',
 
     //Translate for Docs and Docs View
     depositor: 'Subido por',
@@ -63,5 +66,12 @@ export default{
     download: 'Descargar',
     down_label: 'Descargar PDF',
     filters: 'Filtros',
-    remove: 'Eliminar Filtro'
+    remove: 'Eliminar Filtro',
+
+    //Facet Translate
+    "type_of_illustrations": 'Tipo de Ilustraciones',
+    "subject_corporate": 'Tema Organismo',
+    "subject_person": 'Tema Persona',
+    "subject_work": 'Tema Trabajo',
+    "place_of_publication": 'Lugar de Publicación',
 }

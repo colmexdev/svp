@@ -3,7 +3,7 @@ export default {
     state: {
         repo: '',
         base_url: 'https://repositorio.colmex.mx/',
-        url: "https://repositorio.colmex.mx/catalog.json?f[member_of_collections_ssim][]=Tesis",
+        url: "https://repositorio.colmex.mx/catalog.json?f%5Bmember_of_collections_ssim%5D%5B%5D=Violencia%20y%20Paz",
         //url: "https://repositorio.colmex.mx/catalog.json?f[project_tesim][]=test_eime",
         video_url: "http://biblio-rep.colmex.mx/catalog.json?f[project_tesim][]=test_video",
         modalFacets: false

@@ -19,7 +19,8 @@ export default{
             return this.doc;
         }
 	},
-	created: function () {        
+	created: function () {
+        //alert(this.has_model);    
         this.url_doc = this.url_doc + models.types[this.has_model] + '/' + this.id + '.json';
         this.get_data();
     },

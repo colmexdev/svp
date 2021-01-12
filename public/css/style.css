@@ -665,8 +665,20 @@
 }
 
 .dropdown-menu>li>a:hover {
-  background-color: #6b163a;
-  color: #ffffff;
+  /*background-color: #6b163a;*/
+  background-color: none;
+  /*color: #000000;*/
+}
+
+.dropdown-menu>li:hover {
+  /*background-color: #6b163a;*/
+  background-color: #BCE2D3;
+  color: #000000;
+}
+
+.dropdown-menu>li>a{
+  cursor: pointer;
+  padding: 10px 94px 0px 15px;
 }
 
 .dropdown-menu>li>a:hover>span {
@@ -683,8 +695,8 @@
 .btn-close:hover {
   /*color: #333;*/
   color: #ffffff;
-  border: 1px solid #6b163abf;
-  background-color: #6b163abf;
+  border: 1px solid #BCE2D3;
+  background-color: #BCE2D3;
 }
 
 .facet-label {
@@ -730,4 +742,12 @@
 
 .remove-all {
   float: right;
+}
+
+.menu-right{
+  width: 100%;
+}
+
+.menu-right li{
+  padding: 5px 0px 0px 0px;
 }
