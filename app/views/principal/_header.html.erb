@@ -85,9 +85,9 @@
 				<li><a class="<%= ['publicaciones','special'].include?(action_name) ? "active" : "" %>" href="#">Publicaciones</a>
 					<div class="uk-navbar-dropdown">
 						<ul class="uk-nav uk-navbar-dropdown-nav">
-							<li><a class="<%= action_name == 'publicaciones'  ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+							<li><a class="<%= action_name == 'publicaciones'  ? 'active' : '' %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 
-							<li><a class="<%= action_name == 'special'  ? "uk-active" : "" %>" href="<%= recursos_bdcv_path %>">Colección de recursos</a></li>
+							<li><a class="<%= action_name == 'special'  ? 'active'" : '' %>" href="<%= recursos_bdcv_path %>">Colección de recursos</a></li>
 
 						</ul>
 					</div>
