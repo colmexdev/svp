@@ -124,9 +124,9 @@
 			</li>
 			<li class="uk-parent <%= ['publicaciones','special'].include?(action_name) ? 'uk-open' : '' %>"><a class="<%= ['publicaciones','special'].include?(action_name) ? "uk-active" : "" %>" href="#">Publicaciones</a>
 				<ul class="uk-nav-sub">
-					<li><a class="<%= action_name == 'publicaciones'  ? "active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
+					<li><a class="<%= action_name == 'publicaciones'  ? "uk-active" : "" %>" href="<%= publicaciones_path %>">Publicaciones</a></li>
 
-					<li><a class="<%= action_name == 'special'  ? "active" : "" %>" href="<%= recursos_bdcv_path %>">Colección de recursos</a></li>
+					<li><a class="<%= action_name == 'special'  ? "uk-active" : "" %>" href="<%= recursos_bdcv_path %>">Colección de recursos</a></li>
 
 				</ul>
 			</li>
