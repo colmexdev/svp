@@ -1,6 +1,19 @@
 <% @sems.each_with_index do |s,i| %>
 <div class="seminario uk-text-center">
-	<img id="img-sem-<%= i %>" data-src="<%= s.banner.present? ? s.banner.url : '' %>" data-width data-height uk-img>
+		<% @banner = s.banner.url if s.banner.present? %>
+    <% if !s.banner.present? %>
+    <%  begin %>
+    <%    @cliente = TinyTds::Client.new username: ENV["AG_USR"], password: ENV["AG_PWD"], host: ENV["AG_HOST"], port: ENV["AG_PORT"], database: ENV["AG_DB"] %>
+    <%    @resultado = @cliente.execute("SELECT ligaImagen FROM dbo.vw_DatosAgenda WHERE tituloActividad = '#{@sem.titulo}'") %>
+    <%    @banner = @resultado.first['ligaImagen'] %>
+    <%    @cliente.close %>
+    <%  rescue %>
+    <%    @resultado = "" %>
+    <%    @banner = "" %>
+    <%    @cliente.close if @cliente %>
+    <%  end %>
+    <% end %>
+	<img id="img-sem-<%= i %>" data-src="<%= @banner %>" data-width data-height uk-img>
 	<a class="boton-seminario" href="<%= seminario_path(sem: s.titulo.parameterize) %>">Más información</a>
 </div>
 <% end %>

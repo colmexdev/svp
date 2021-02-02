@@ -36,6 +36,7 @@ class PrincipalController < ApplicationController
         @cliente = TinyTds::Client.new username: ENV["AG_USR"], password: ENV["AG_PWD"], host: ENV["AG_HOST"], port: ENV["AG_PORT"], database: ENV["AG_DB"]
         @resultado = @cliente.execute("SELECT ligaImagen FROM dbo.vw_DatosAgenda WHERE tituloActividad = '#{@sem.titulo}'")
         @banner = @resultado.first['ligaImagen']
+        @cliente.close
       rescue
         @resultado = ""
         @banner = ""
