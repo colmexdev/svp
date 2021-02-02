@@ -8,7 +8,7 @@
 	</div>
 	<div class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
 		<div class="sem-year"><a id="nxt-yr" href="<%= seminarios_path(anio: (params[:anio] ? params[:anio].to_i + 1 : Sesion.maximum(:fecha_i).year + 1)) %>"><%= @nxt > 0 ? '< ' + (params[:anio] ? (params[:anio].to_i + 1).to_s : (Sesion.maximum(:fecha_i).year + 1).to_s) : '' %></a></div>
-		<div class="sem-year uk-text-right"><a id="lst-yr" href="<%= seminarios_path(anio: (params[:anio] ? params[:anio].to_i - 1 : Sesion.maximum(:fecha_i).year - 1)) %>"><%= params[:anio] ? params[:anio] : Sesion.maximum(:fecha_i).year.to_s %></a></div>
+		<div class="sem-year uk-text-right"><a id="lst-yr" href="<%= seminarios_path(anio: (params[:anio] ? params[:anio].to_i - 1 : Sesion.maximum(:fecha_i).year - 1)) %>"><%= @lst > 0 ? (params[:anio] ? (params[:anio].to_i - 1).to_s : (Sesion.maximum(:fecha_i).year - 1).to_s) + ' >' : '' %></a></div>
 	</div>
 </div>
 <%= render 'principal/footer' %>
