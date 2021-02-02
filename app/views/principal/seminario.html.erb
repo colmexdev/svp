@@ -4,7 +4,7 @@
 </div>
 <div class="contenido">
 	<div class="seccion-pub">
-		<img id="img-agenda" data-src="<%= @sem.banner.present? ? @sem.banner.url : '' %>" data-width data-height uk-img>
+		<img id="img-agenda" data-src="<%= @banner %>" data-width data-height uk-img>
 		<% if @sem.descripcion.present? %>
 		<span class="titulo desc-pub">Sobre la <span class="outline blanco">sesión</span></span><br>
 		<%= @sem.descripcion.gsub(/<(\/?)div>/,'<\1p>').html_safe %>
@@ -87,19 +87,6 @@
 	<% end %>
 </div>
 <script>
-	document.addEventListener("DOMContentLoaded", function(){
-		var xhr = new XMLHttpRequest();
-		xhr.open("get","https://www.colmex.mx/catalogo_eventos.json?titulo=<%= @sem.titulo %>");
-		xhr.onload = function(){
-			if(xhr.status === 200){
-				var data = JSON.parse(xhr.response);
-				if(data["videos"].length > 0){
-					document.querySelector("#img-agenda").setAttribute("src", data["videos"][0]["ligaImagen"].replace("http","https"));
-				}
-			}
-		}
-		xhr.send();
-	});
 	window.addEventListener("resize", function(){
 		document.querySelector(".video-princ").style.height = document.querySelector(".video-princ").offsetWidth * (9/16) + "px";
 	});
