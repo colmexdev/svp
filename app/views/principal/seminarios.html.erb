@@ -1,33 +1,14 @@
 <%= render 'principal/header' %>
 <div class="encabezado-seccion uk-text-center">
-	<span class="titulo-encabezado">Seminarios <span id="anio-sem" class="outline">2019</span></span>
+	<span class="titulo-encabezado">Seminarios <span id="anio-sem" class="outline"><%= params[:anio] ? params[:anio] : Sesion.maximum(:fecha_i).year.to_s %></span></span>
 </div>
 <div class="contenido">
 	<div id="grid-seminarios" class="uk-grid-collapse uk-flex-middle uk-child-width-1-2@m" uk-grid>
-
+		<%= render partial: 'seminarios' %>
 	</div>
 	<div class="sel-year uk-grid-collapse uk-child-width-1-2" uk-grid>
-		<div class="sem-year"><a id="nxt-yr" data-remote="true"></a></div>
-		<div class="sem-year uk-text-right"><a id="lst-yr" data-remote="true"></a></div>
+		<div class="sem-year"><a id="nxt-yr" href="<%= seminarios_path(anio: (params[:anio] ? params[:anio].to_i + 1 : Sesion.maximum(:fecha_i).year + 1)) %>"><%= @nxt > 0 ? '< ' + (params[:anio] ? (params[:anio].to_i + 1).to_s : (Sesion.maximum(:fecha_i).year + 1).to_s) : '' %></a></div>
+		<div class="sem-year uk-text-right"><a id="lst-yr" href="<%= seminarios_path(anio: (params[:anio] ? params[:anio].to_i - 1 : Sesion.maximum(:fecha_i).year - 1)) %>"><%= params[:anio] ? params[:anio] : Sesion.maximum(:fecha_i).year.to_s %></a></div>
 	</div>
 </div>
-<script>
-	var xhr = new XMLHttpRequest();
-	xhr.open("get","<%= seminarios_path %>.js?anio=<%= params[:anio] ? params[:anio] : Sesion.maximum(:fecha_i).year %>");
-	xhr.withCredentials = true;
-	xhr.responseType = "blob";
-	xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");
-	xhr.onload = function(){
-		if(xhr.status === 200){
-			var s = document.querySelector("#script-js");
-			if(s)
-				s.remove();
-			var script = document.createElement("script");
-			script.id = "script-js";
-			script.src = URL.createObjectURL(xhr.response);
-			document.body.appendChild(script);
-		}
-	};
-	xhr.send();
-</script>
 <%= render 'principal/footer' %>
