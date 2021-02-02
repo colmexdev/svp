@@ -32,14 +32,14 @@ class PrincipalController < ApplicationController
     @title = @sem.titulo
     @banner = @sem.banner.url if @sem.banner
     if @sem.banner.nil?
-      begin
+      #begin
         @cliente = TinyTds::Client.new username: ENV["AG_USR"], password: ENV["AG_PWD"], host: ENV["AG_HOST"], port: ENV["AG_PORT"], database: ENV["AG_DB"]
         @resultado = @cliente.execute("SELECT ligaImagen FROM dbo.vw_DatosAgenda WHERE tituloActividad = '#{@sem.titulo}'")
         @banner = @resultado.first['ligaImagen']
-      rescue
-        @resultado = []
-        @cliente.close if @cliente
-      end
+      #rescue
+      #  @resultado = []
+      #  @cliente.close if @cliente
+      #end
     end
   end
 
