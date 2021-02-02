@@ -31,7 +31,7 @@ class PrincipalController < ApplicationController
     @imgs = Imagen.where(sesion: @sem.titulo).order(indice: :asc)
     @title = @sem.titulo
     @banner = @sem.banner.url if @sem.banner.present?
-    if @sem.banner.nil?
+    if !@sem.banner.present?
       #begin
         @cliente = TinyTds::Client.new username: ENV["AG_USR"], password: ENV["AG_PWD"], host: ENV["AG_HOST"], port: ENV["AG_PORT"], database: ENV["AG_DB"]
         @resultado = @cliente.execute("SELECT ligaImagen FROM dbo.vw_DatosAgenda WHERE tituloActividad = '#{@sem.titulo}'")
